@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  KICK POVERTY — CONTACT PAGE
+  ================================================================
+  File:        pages/contact.html
+  Description: Contact details, WhatsApp links, and address.
+  ================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Kick Poverty Microfinance — reach our CEO or Director of Credits via phone or WhatsApp.">
+  <title>Contact | Kick Poverty Microfinance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* -------------------------------------------------------
+       PAGE-SPECIFIC: Contact card with strong presence
+    ------------------------------------------------------- */
+    .contact-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8) var(--space-6);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-card__name {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-1);
+    }
+
+    .contact-card__title {
+      font-size: var(--text-sm);
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: var(--space-5);
+    }
+
+    .phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-weight: 600;
+      color: var(--color-primary);
+      font-size: var(--text-md);
+      transition: color var(--transition-fast);
+    }
+
+    .phone-link:hover {
+      color: var(--color-accent);
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: #25D366;
+      color: white;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      margin-top: var(--space-3);
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .whatsapp-btn:hover {
+      background: #1ebe5b;
+      transform: translateY(-1px);
+    }
+
+    /* Map placeholder */
+    .map-placeholder {
+      background: linear-gradient(135deg, #E8F5EE 0%, #D1EAD8 100%);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-8);
+      gap: var(--space-3);
+    }
+
+    .map-placeholder__icon {
+      font-size: 2.5rem;
+    }
+
+    .map-placeholder__title {
+      font-size: var(--text-md);
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+  </style>
+</head>
+<body id="top">
+
+  <div id="nav-placeholder"></div>
+
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow page-hero__eyebrow">Reach Out</span>
+      <h1>Contact Us</h1>
+      <p class="page-hero__lead lead">
+        Whether you're interested in a loan or an investment opportunity,
+        our team is ready to help you take the next step.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===========================================================
+       CONTACT DETAILS
+  =========================================================== -->
+  <section class="section" aria-labelledby="contacts-heading">
+    <div class="container container--narrow">
+
+      <div class="section-header reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 id="contacts-heading">Speak to Our Team</h2>
+        <p class="lead">
+          For loan enquiries or investment expressions of interest,
+          please contact us directly via phone or WhatsApp.
+        </p>
+      </div>
+
+      <!-- Contact persons -->
+      <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-5);" class="reveal-stagger">
+
+        <!-- CEO -->
+        <div class="contact-card">
+          <h3 class="contact-card__name">Dr. Moses Simon</h3>
+          <p class="contact-card__title">Chief Executive Director — Founder &amp; Owner</p>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">📞</div>
+              <div>
+                <div class="contact-item__label">Phone</div>
+                <a href="tel:+23230651955" class="phone-link contact-item__value">+232 30 651 955</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">💬</div>
+              <div>
+                <div class="contact-item__label">WhatsApp</div>
+                <a href="tel:+23279179161" class="phone-link contact-item__value">+232 79 179 161</a>
+                <br>
+                <a href="https://wa.me/23279179161" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                  <span>💬</span> Message on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Director of Credits -->
+        <div class="contact-card">
+          <h3 class="contact-card__name">Ms. Mariama Farmah</h3>
+          <p class="contact-card__title">Director of Credits &amp; Administration</p>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">💬</div>
+              <div>
+                <div class="contact-item__label">WhatsApp</div>
+                <a href="tel:+23280462376" class="phone-link contact-item__value">+232 80 462 376</a>
+                <br>
+                <a href="https://wa.me/23280462376" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                  <span>💬</span> Message on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================================================
+       ADDRESS SECTION — alt background
+  =========================================================== -->
+  <section class="section section--alt" aria-labelledby="address-heading">
+    <div class="container container--narrow">
+      <div class="split reveal">
+
+        <div>
+          <span class="eyebrow">Office Location</span>
+          <h2 id="address-heading" style="margin-top:var(--space-2); margin-bottom: var(--space-5);">Official Address</h2>
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-item__label">Address</div>
+              <div class="contact-item__value">
+                Four Mile, Masiaka Highway<br>
+                Newton, Waterloo<br>
+                Western Area Rural District<br>
+                Sierra Leone
+              </div>
+            </div>
+          </div>
+
+          <div class="info-box" style="margin-top: var(--space-6);">
+            <div class="info-box__label">Registration</div>
+            <div class="info-box__value" style="font-size: var(--text-base); font-weight: 500; line-height: var(--leading-relaxed);">
+              Fully registered with the Corporate Affairs Commission &amp;
+              national statutory financial regulatory authorities.
+            </div>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder">
+          <div class="map-placeholder__icon" aria-hidden="true">🗺️</div>
+          <div class="map-placeholder__title">Four Mile, Masiaka Highway</div>
+          <p class="caption">Newton, Waterloo · Western Area Rural District · Sierra Leone</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/components.js"></script>
+  <script>
+    injectNav('../');
+    injectFooter('../');
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

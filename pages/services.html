@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  KICK POVERTY — SERVICES PAGE
+  ================================================================
+  File:        pages/services.html
+  Description: Loan products, interest rates, eligibility, and
+               the loan application process.
+  ================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kick Poverty Microfinance services — small business loans, emergency loans, and eligibility criteria.">
+  <title>Services | Kick Poverty Microfinance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* -------------------------------------------------------
+       PAGE-SPECIFIC: Process step list
+       Numbered steps with connecting line on tablet+
+    ------------------------------------------------------- */
+    .process-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+      position: relative;
+    }
+
+    .process-step {
+      display: flex;
+      gap: var(--space-5);
+      align-items: flex-start;
+    }
+
+    .process-step__number {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: var(--text-md);
+      font-weight: 700;
+    }
+
+    .process-step__content h4 {
+      margin-bottom: var(--space-1);
+    }
+
+    /* Rate highlight box */
+    .rate-highlight {
+      background: var(--color-primary);
+      border-radius: var(--radius-xl);
+      padding: var(--space-10);
+      text-align: center;
+      color: var(--color-text-inverse);
+    }
+
+    .rate-highlight__number {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--color-accent-light);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+
+    .rate-highlight__label {
+      font-size: var(--text-md);
+      color: rgba(255,255,255,0.80);
+      margin-bottom: var(--space-4);
+    }
+
+    .rate-highlight__note {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.55);
+    }
+  </style>
+</head>
+<body id="top">
+
+  <div id="nav-placeholder"></div>
+
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow page-hero__eyebrow">What We Offer</span>
+      <h1>Our Services</h1>
+      <p class="page-hero__lead lead">
+        Fast, fair, and transparent loans for qualified individuals
+        and small businesses across Sierra Leone.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===========================================================
+       LOAN SERVICES OVERVIEW
+  =========================================================== -->
+  <section class="section" aria-labelledby="loans-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Loan Products</span>
+        <h2 id="loans-heading">Designed for Real Needs</h2>
+        <p class="lead">
+          We disburse loans to qualified applicants based on key
+          assessment targets. Applicants are screened to confirm
+          capacity to repay without delays.
+        </p>
+      </div>
+
+      <div class="cards-grid reveal-stagger">
+
+        <div class="card">
+          <div class="card__icon" aria-hidden="true">🏪</div>
+          <h3 class="card__title">Business Loans</h3>
+          <p>Capital for traders, retailers, and entrepreneurs needing funds to start, sustain, or grow small businesses.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon" aria-hidden="true">⚡</div>
+          <h3 class="card__title">Emergency Loans</h3>
+          <p>Quick-turnaround loans for urgent financial needs. Designed specifically for service workers and business owners in crisis situations.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon" aria-hidden="true">🌸</div>
+          <h3 class="card__title">Women's Empowerment Loans</h3>
+          <p>Priority financing for widowed and single mothers in business — aligned with our core mission of social impact.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================================================
+       INTEREST RATE SECTION — alt background
+  =========================================================== -->
+  <section class="section section--alt" aria-labelledby="rate-heading">
+    <div class="container">
+      <div class="split reveal">
+
+        <!-- Rate highlight box -->
+        <div class="rate-highlight">
+          <div class="rate-highlight__number">30%</div>
+          <div class="rate-highlight__label" id="rate-heading">Annual Interest Rate</div>
+          <p class="rate-highlight__note">
+            Applied to all issued loans.<br>
+            Clear terms communicated upfront.
+          </p>
+        </div>
+
+        <!-- Eligibility text -->
+        <div>
+          <span class="eyebrow">Eligibility</span>
+          <h2 style="margin-top: var(--space-2); margin-bottom: var(--space-5);">Who Can Apply?</h2>
+          <p>Loan applications are open to individuals who can demonstrate:</p>
+
+          <div style="display:flex; flex-direction:column; gap: var(--space-4); margin-top: var(--space-5);">
+            <div class="info-box">
+              <div class="info-box__label">Capacity to Repay</div>
+              <div class="info-box__value" style="font-size: var(--text-base); font-weight: 500;">Screened through income and business assessment</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box__label">Guarantor</div>
+              <div class="info-box__value" style="font-size: var(--text-base); font-weight: 500;">A trusted guarantor to support the application</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box__label">Collateral (large loans)</div>
+              <div class="info-box__value" style="font-size: var(--text-base); font-weight: 500;">Required for exceptional or high-value loan amounts</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================================================
+       APPLICATION PROCESS
+  =========================================================== -->
+  <section class="section" aria-labelledby="process-heading">
+    <div class="container container--narrow">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow">How It Works</span>
+        <h2 id="process-heading">The Loan Process</h2>
+      </div>
+
+      <div class="process-list reveal-stagger">
+        <div class="process-step">
+          <div class="process-step__number" aria-hidden="true">1</div>
+          <div class="process-step__content">
+            <h4>Initial Enquiry</h4>
+            <p>Contact our Credit Officers or Director of Credits &amp; Administration to discuss your needs and eligibility.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__number" aria-hidden="true">2</div>
+          <div class="process-step__content">
+            <h4>Application &amp; Screening</h4>
+            <p>Submit your application. Our team assesses your capacity to repay, reviews your guarantor, and verifies collateral where required.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__number" aria-hidden="true">3</div>
+          <div class="process-step__content">
+            <h4>Approval</h4>
+            <p>Successful applicants receive confirmation. Terms are communicated clearly and transparently before any agreement is signed.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__number" aria-hidden="true">4</div>
+          <div class="process-step__content">
+            <h4>Disbursement</h4>
+            <p>Approved funds are disbursed promptly — especially for emergency cases where speed is critical.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__number" aria-hidden="true">5</div>
+          <div class="process-step__content">
+            <h4>Repayment</h4>
+            <p>Repay on the agreed schedule. We work with clients to ensure repayment is manageable and timely.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--space-10); text-align:center;" class="reveal">
+        <a href="contact.html" class="btn btn--primary">Apply Now — Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/components.js"></script>
+  <script>
+    injectNav('../');
+    injectFooter('../');
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
