@@ -1,830 +1,481 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Council for Humanitarian Empowerment & Natural Disasters (CHEND) — Empowering communities through structured training, consultancy, and microfinance solutions in Sierra Leone."
-    />
-    <title>CHEND & Kick Poverty Microfinance | Home</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Council for Humanitarian Empowerment & Natural Disasters — structured training, consultancy, and support for communities in need." />
+  <title>CHEND Council — Council for Humanitarian Empowerment &amp; Natural Disasters</title>
 
-    <!-- Google Fonts: Playfair Display (heading) + Source Sans 3 (body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Google Fonts: Playfair Display (display) + Source Sans 3 (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Master stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <!-- =====================================================
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================
        NAVIGATION BAR
-       Sticky, collapses to hamburger on mobile/tablet
-  ====================================================== -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="container container--wide">
-        <div class="navbar__inner">
-          <!-- Logo -->
-          <a href="index.html" class="navbar__logo" aria-label="CHEND Home">
-            <div class="navbar__logo-icon">🌍</div>
-            <div class="navbar__logo-text">
-              <span class="navbar__logo-main">CHEND</span>
-              <span class="navbar__logo-sub">Kick Poverty Microfinance</span>
-            </div>
-          </a>
+       ======================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
 
-          <!-- Desktop links -->
-          <ul class="navbar__links" role="list">
-            <li><a href="index.html" class="navbar__link">Home</a></li>
-            <li><a href="pages/about.html" class="navbar__link">About</a></li>
-            <li>
-              <a href="pages/microfinance.html" class="navbar__link">Microfinance</a>
-            </li>
-            <li><a href="pages/investors.html" class="navbar__link">Investors</a></li>
-            <li><a href="pages/contact.html" class="navbar__link">Contact</a></li>
-          </ul>
-
-          <!-- CTA + Hamburger -->
-          <div class="flex" style="align-items: center; gap: 1rem">
-            <a
-              href="pages/contact.html"
-              class="btn btn--primary navbar__cta"
-              style="display: none"
-              id="navCTA"
-              >Get in Touch</a
-            >
-            <button
-              class="navbar__hamburger"
-              id="hamburger"
-              aria-label="Toggle navigation menu"
-              aria-expanded="false"
-              aria-controls="mobileMenu"
-            >
-              <span></span><span></span><span></span>
-            </button>
-          </div>
+      <!-- Logo / brand mark -->
+      <a href="index.html" class="navbar__logo" aria-label="CHEND Council home">
+        <div class="navbar__logo-icon" aria-hidden="true">
+          <!-- Simple shield SVG representing humanitarian mission -->
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <path d="M10 1L2 4.5v5c0 4.7 3.4 9.1 8 10.2C14.6 18.6 18 14.2 18 9.5v-5L10 1zm0 9h5c-.4 3-2.7 5.7-5 6.8V10H5V6.1l5-2.2V10z"/>
+          </svg>
         </div>
-      </div>
+        <div class="navbar__logo-text">
+          CHEND Council
+          <span>Humanitarian Empowerment</span>
+        </div>
+      </a>
 
-      <!-- Mobile dropdown menu -->
-      <div
-        class="navbar__mobile-menu"
-        id="mobileMenu"
-        aria-hidden="true"
-        role="menu"
-      >
-        <a href="index.html" class="navbar__mobile-link" role="menuitem"
-          >Home</a
-        >
-        <a href="pages/about.html" class="navbar__mobile-link" role="menuitem"
-          >About Us</a
-        >
-        <a href="pages/microfinance.html" class="navbar__mobile-link" role="menuitem"
-          >Microfinance</a
-        >
-        <a href="pages/investors.html" class="navbar__mobile-link" role="menuitem"
-          >Investors</a
-        >
-        <a href="pages/contact.html" class="navbar__mobile-link" role="menuitem"
-          >Contact</a
-        >
-        <a
-          href="pages/contact.html"
-          class="btn btn--primary w-full mt-md"
-          style="justify-content: center"
-          >Get in Touch</a
-        >
-      </div>
-    </nav>
+      <!-- Desktop navigation links -->
+      <nav class="navbar__links" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#beneficiaries">Beneficiaries</a>
+        <a href="#contact">Contact</a>
+        <!-- Cross-link to subsidiary microfinance site -->
+        <a href="pages/kickpoverty.html" class="navbar__cta">Kick Po Microfinance &rarr;</a>
+      </nav>
 
-    <!-- =====================================================
+      <!-- Hamburger toggle for mobile -->
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ========================================================
        HERO SECTION
-       Full-viewport introduction with stats + loan types
-  ====================================================== -->
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="container">
-        <div class="hero__grid">
-          <!-- Left: Copy -->
-          <div class="hero__content">
-            <div class="hero__badge">
-              <span class="hero__badge-dot"></span>
-              Established 2024 · Sierra Leone
-            </div>
+       ======================================================== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container hero__inner">
 
-            <h1 class="hero__title" id="heroTitle">
-              Empowering People,<br />
-              <em>Ending Poverty</em>
-            </h1>
+      <!-- Left: headline + copy + CTAs -->
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          Registered Humanitarian Organisation
+        </div>
 
-            <p class="hero__subtitle">
-              The Council for Humanitarian Empowerment &amp; Natural Disasters
-              (CHEND) and its subsidiary
-              <strong>Kick Poverty Microfinance</strong> deliver training,
-              consultancy, and accessible soft loans to those who need it most
-              across Sierra Leone.
-            </p>
+        <h1 id="hero-heading">
+          Council for <em>Humanitarian</em><br />
+          Empowerment &amp;<br />
+          Natural Disasters
+        </h1>
 
-            <div class="hero__actions">
-              <a href="pages/microfinance.html" class="btn btn--primary btn--lg"
-                >Explore Loans</a
-              >
-              <a href="pages/about.html" class="btn btn--outline btn--lg"
-                >Learn About Us</a
-              >
-            </div>
+        <p class="hero__desc">
+          Building human capital through structured training, consultancy, and microfinance
+          support — uplifting orphans, widows, persons with disabilities, the aged, and
+          school-going children across our communities.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#programs" class="btn btn--primary btn--lg">Our Programs</a>
+          <a href="pages/kickpoverty.html" class="btn btn--outline-white btn--lg">Kick Po Microfinance</a>
+        </div>
+      </div>
+
+      <!-- Right: quick-stats visual card (hidden on mobile via CSS) -->
+      <div class="hero__visual" aria-hidden="true">
+        <p class="hero__visual-title">Our Reach &amp; Impact</p>
+        <div class="hero__stat-row">
+          <!-- Each stat block highlights a key organisational metric -->
+          <div class="hero__stat">
+            <div class="hero__stat-value">5+</div>
+            <div class="hero__stat-label">Target Beneficiary Groups</div>
           </div>
-
-          <!-- Right: Info card -->
-          <div class="hero__visual" aria-hidden="true">
-            <div class="hero__card">
-              <!-- Quick stats -->
-              <div class="hero__stat-grid">
-                <div class="hero__stat">
-                  <div class="hero__stat-value" data-count="30" data-suffix="%">
-                    30%
-                  </div>
-                  <div class="hero__stat-label">Interest Rate</div>
-                </div>
-                <div class="hero__stat">
-                  <div class="hero__stat-value" data-count="20" data-suffix="%">
-                    20%
-                  </div>
-                  <div class="hero__stat-label">Investor Return</div>
-                </div>
-                <div class="hero__stat">
-                  <div class="hero__stat-value">2024</div>
-                  <div class="hero__stat-label">Founded</div>
-                </div>
-                <div class="hero__stat">
-                  <div class="hero__stat-value">Newton</div>
-                  <div class="hero__stat-label">Western Area</div>
-                </div>
-              </div>
-
-              <div class="hero__card-divider"></div>
-
-              <!-- Loan categories -->
-              <p
-                style="
-                  font-size: 0.72rem;
-                  text-transform: uppercase;
-                  letter-spacing: 0.1em;
-                  color: rgba(255, 255, 255, 0.45);
-                  margin-bottom: 0.75rem;
-                  font-weight: 700;
-                "
-              >
-                Loan Categories
-              </p>
-
-              <div class="hero__loan-item">
-                <div class="hero__loan-icon">👩‍💼</div>
-                <span class="hero__loan-text">Women in Business</span>
-              </div>
-              <div class="hero__loan-item">
-                <div class="hero__loan-icon">🎓</div>
-                <span class="hero__loan-text">Youth College Fees</span>
-              </div>
-              <div class="hero__loan-item">
-                <div class="hero__loan-icon">🏠</div>
-                <span class="hero__loan-text">Property Loans</span>
-              </div>
-            </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">2</div>
+            <div class="hero__stat-label">Core Subsidiaries</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">SME</div>
+            <div class="hero__stat-label">Enterprise Training Focus</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">SL</div>
+            <div class="hero__stat-label">Sierra Leone Based</div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- =====================================================
-       INTRO STRIP
-       Three pillars displayed in a bold colored band
-  ====================================================== -->
-    <div class="intro-strip" aria-label="Our three pillars">
-      <div class="container">
-        <div class="intro-strip__inner">
-          <div class="intro-strip__item reveal">
-            <span class="intro-strip__icon">🤝</span>
-            <strong class="intro-strip__title"
-              >Training &amp; Consultancy</strong
-            >
-            <p class="intro-strip__desc">
-              Structured programs for SMEs and corporate institutions.
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       ABOUT SECTION
+       ======================================================== -->
+  <section class="section" id="about" aria-labelledby="about-heading">
+    <div class="container">
+
+      <div class="grid-2" style="align-items:center; gap: 3.5rem;">
+
+        <!-- Left: textual overview -->
+        <div>
+          <span class="section-eyebrow">Who We Are</span>
+          <h2 id="about-heading">Established to Address Human Capital Challenges</h2>
+          <p class="lead mt-md">
+            The Council for Humanitarian Empowerment &amp; Natural Disasters (CHEND) is an organisation
+            built to tackle human capital and knowledge economy challenges in our communities.
+          </p>
+          <p class="text-muted mt-md">
+            CHEND provides structured training programmes and consultancies for Small &amp;
+            Medium-Sized Enterprises as well as corporate institutions and companies. During the
+            course of delivering its core mandate, the Council identified a critical felt need for
+            financial and knowledge capital — leading to the establishment of
+            <strong>Kick Poverty Microfinance</strong> as a subsidiary.
+          </p>
+          <a href="pages/kickpoverty.html" class="btn btn--outline mt-xl">
+            Learn about Kick Po Microfinance
+          </a>
+        </div>
+
+        <!-- Right: mission / vision split card -->
+        <div class="mv-split animate-in">
+          <!-- Mission side — navy background -->
+          <div class="mv-split__side mv-split__side--left">
+            <span class="section-eyebrow section-eyebrow--white">Mission</span>
+            <h3>Empowering People Through Knowledge &amp; Capital</h3>
+            <p>
+              To empower individuals, enterprises, and communities through targeted training,
+              consultancy, and financial access — leaving no one behind.
             </p>
           </div>
-
-          <div class="intro-strip__item reveal reveal-delay-2">
-            <span class="intro-strip__icon">💰</span>
-            <strong class="intro-strip__title">Microfinance Loans</strong>
-            <p class="intro-strip__desc">
-              Soft loans for women, youth, and property owners.
-            </p>
-          </div>
-
-          <div class="intro-strip__item reveal reveal-delay-3">
-            <span class="intro-strip__icon">🌱</span>
-            <strong class="intro-strip__title">Community Impact</strong>
-            <p class="intro-strip__desc">
-              Serving orphans, widows, the aged, and those in need.
+          <!-- Vision side — blue background -->
+          <div class="mv-split__side mv-split__side--right">
+            <span class="section-eyebrow section-eyebrow--white">Vision</span>
+            <h3>A Self-Reliant &amp; Thriving Society</h3>
+            <p>
+              A society where every individual regardless of circumstance has access to the
+              resources and knowledge required to contribute to economic and social development.
             </p>
           </div>
         </div>
+
       </div>
     </div>
+  </section>
 
-    <!-- =====================================================
-       ABOUT OVERVIEW SECTION
-       Brief overview with link to full About page
-  ====================================================== -->
-    <section class="section" id="about">
-      <div class="container">
-        <div
-          style="
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-          "
-        >
-          <!-- Text side -->
-          <div class="reveal">
-            <span class="section-label">Who We Are</span>
-            <h2 class="section-title mt-md">
-              A Council Built for Human Dignity
-            </h2>
-            <p>
-              The
-              <strong
-                >Council for Humanitarian Empowerment &amp; Natural Disasters
-                (CHEND)</strong
-              >
-              was established to address human capital and knowledge economy
-              challenges facing vulnerable communities in Sierra Leone.
-            </p>
-            <p>
-              During its core mandate, CHEND discovered the urgent need for
-              financial and knowledge capital among the communities it served.
-              This led to the birth of
-              <strong>Kick Poverty Microfinance</strong> — a subsidiary that
-              provides accessible soft loans to women in business, youth seeking
-              college fees, and property owners.
-            </p>
-            <p>
-              Owned and led by <strong>Dr. Moses Simon (PhD, DBA)</strong>, the
-              company has been fully registered with the Corporate Affairs
-              Commission and national statutory financial regulatory
-              authorities.
-            </p>
-            <a href="pages/about.html" class="btn btn--outline-dark mt-lg"
-              >Read Full Story →</a
-            >
-          </div>
 
-          <!-- Visual side: key facts -->
-          <div class="reveal reveal-delay-2">
-            <div style="display: flex; flex-direction: column; gap: 1rem">
-              <!-- Fact card 1 -->
-              <div
-                class="card"
-                style="display: flex; align-items: center; gap: 1.25rem"
-              >
-                <div class="card__icon" style="margin: 0; flex-shrink: 0">
-                  📍
-                </div>
-                <div>
-                  <h4 class="card__title" style="margin: 0 0 0.25rem">
-                    Official Address
-                  </h4>
-                  <p class="card__body" style="margin: 0">
-                    Four Mile, Masiaka Highway, Newton, Waterloo — Western Area
-                    Rural District
-                  </p>
-                </div>
-              </div>
+  <!-- ========================================================
+       PROGRAMS SECTION — Three core service pillars
+       ======================================================== -->
+  <section class="section section--alt" id="programs" aria-labelledby="programs-heading">
+    <div class="container">
 
-              <!-- Fact card 2 -->
-              <div
-                class="card"
-                style="display: flex; align-items: center; gap: 1.25rem"
-              >
-                <div class="card__icon" style="margin: 0; flex-shrink: 0">
-                  🏛️
-                </div>
-                <div>
-                  <h4 class="card__title" style="margin: 0 0 0.25rem">
-                    Fully Registered
-                  </h4>
-                  <p class="card__body" style="margin: 0">
-                    Corporate Affairs Commission &amp; national statutory
-                    financial regulatory authorities
-                  </p>
-                </div>
-              </div>
-
-              <!-- Fact card 3 -->
-              <div
-                class="card"
-                style="display: flex; align-items: center; gap: 1.25rem"
-              >
-                <div class="card__icon" style="margin: 0; flex-shrink: 0">
-                  🚀
-                </div>
-                <div>
-                  <h4 class="card__title" style="margin: 0 0 0.25rem">
-                    Founded January 2024
-                  </h4>
-                  <p class="card__body" style="margin: 0">
-                    Started with an initial capital of USD 1,000 and making
-                    tremendous progress.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-       TARGET BENEFICIARIES SECTION
-       Who CHEND serves — displayed as icon cards
-  ====================================================== -->
-    <section class="section section--alt" id="beneficiaries">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Who We Serve</span>
-          <h2 class="section-title section-title--underlined mt-md">
-            Target Beneficiaries
-          </h2>
-          <p class="section-subtitle">
-            CHEND's programs are designed for those facing the greatest barriers
-            — providing support, knowledge, and financial access where it
-            matters most.
-          </p>
-        </div>
-
-        <!-- Beneficiary cards grid -->
-        <div class="grid grid--3" style="grid-template-columns: repeat(3, 1fr)">
-          <div class="target-card reveal">
-            <div class="target-card__icon">🧒</div>
-            <div>
-              <h4 class="target-card__title">Orphans</h4>
-              <p class="target-card__desc">
-                Children without parental support, provided with guidance,
-                educational resources, and community care.
-              </p>
-            </div>
-          </div>
-
-          <div class="target-card reveal reveal-delay-1">
-            <div class="target-card__icon">👩</div>
-            <div>
-              <h4 class="target-card__title">Widows</h4>
-              <p class="target-card__desc">
-                Women who have lost spouses and need financial stability,
-                business training, and emotional support.
-              </p>
-            </div>
-          </div>
-
-          <div class="target-card reveal reveal-delay-2">
-            <div class="target-card__icon">♿</div>
-            <div>
-              <h4 class="target-card__title">People with Disabilities</h4>
-              <p class="target-card__desc">
-                Persons living with disability issues, empowered through
-                inclusive training and accessible loan programs.
-              </p>
-            </div>
-          </div>
-
-          <div class="target-card reveal reveal-delay-1">
-            <div class="target-card__icon">👴</div>
-            <div>
-              <h4 class="target-card__title">The Aged (75+)</h4>
-              <p class="target-card__desc">
-                Senior citizens aged 75 and above who require dignified support
-                and welfare provisions.
-              </p>
-            </div>
-          </div>
-
-          <div class="target-card reveal reveal-delay-2">
-            <div class="target-card__icon">🎒</div>
-            <div>
-              <h4 class="target-card__title">Deprived School Children</h4>
-              <p class="target-card__desc">
-                School-going children from financially deprived backgrounds who
-                deserve the chance to learn and grow.
-              </p>
-            </div>
-          </div>
-
-          <div class="target-card reveal reveal-delay-3">
-            <div class="target-card__icon">👩‍💼</div>
-            <div>
-              <h4 class="target-card__title">Women in Business</h4>
-              <p class="target-card__desc">
-                Female entrepreneurs and micro-business owners who need capital
-                to start, grow, or sustain their ventures.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-       LOAN TYPES SECTION
-       Three main loan products Kick Poverty offers
-  ====================================================== -->
-    <section class="section" id="loans">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Kick Poverty Microfinance</span>
-          <h2 class="section-title section-title--underlined mt-md">
-            Our Loan Products
-          </h2>
-          <p class="section-subtitle">
-            Accessible, structured soft loans designed for the people who need
-            financial capital the most — with clear terms and a supportive
-            process.
-          </p>
-        </div>
-
-        <div class="grid grid--3">
-          <!-- Loan Card: Women in Business -->
-          <div class="loan-card reveal">
-            <div class="loan-card__icon">👩‍💼</div>
-            <h3 class="loan-card__title">Women in Business</h3>
-            <p class="loan-card__desc">
-              Empowering female entrepreneurs — especially widows and single
-              mothers — with the working capital they need to sustain and grow
-              their businesses.
-            </p>
-            <span class="loan-card__badge">Business Loan</span>
-          </div>
-
-          <!-- Loan Card: Youth College Fees -->
-          <div class="loan-card reveal reveal-delay-2">
-            <div class="loan-card__icon">🎓</div>
-            <h3 class="loan-card__title">Youth College Fees</h3>
-            <p class="loan-card__desc">
-              Supporting the next generation by providing loans for tertiary and
-              college education fees, so financial barriers never stop a young
-              person's future.
-            </p>
-            <span class="loan-card__badge">Education Loan</span>
-          </div>
-
-          <!-- Loan Card: Property Loans -->
-          <div class="loan-card reveal reveal-delay-3">
-            <div class="loan-card__icon">🏠</div>
-            <h3 class="loan-card__title">Property Loans</h3>
-            <p class="loan-card__desc">
-              For property owners who require financial support for development,
-              renovation, or investment — backed by collateral and structured
-              agreements.
-            </p>
-            <span class="loan-card__badge">Property Loan</span>
-          </div>
-        </div>
-
-        <div class="text-center mt-2xl reveal">
-          <a href="pages/microfinance.html" class="btn btn--primary btn--lg"
-            >View All Loan Details →</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-       STATS BAND
-       Key numbers displayed prominently
-  ====================================================== -->
-    <section class="section section--dark" aria-label="Key figures">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">By the Numbers</span>
-          <h2 class="section-title mt-md">Progress Since January 2024</h2>
-        </div>
-
-        <div class="grid grid--4">
-          <div class="stat-card reveal">
-            <div class="stat-card__number" data-count="30" data-suffix="%">
-              30%
-            </div>
-            <div class="stat-card__label">Annual Interest Rate</div>
-          </div>
-          <div class="stat-card reveal reveal-delay-1">
-            <div class="stat-card__number" data-count="20" data-suffix="%">
-              20%
-            </div>
-            <div class="stat-card__label">Return for Investors</div>
-          </div>
-          <div class="stat-card reveal reveal-delay-2">
-            <div class="stat-card__number">USD 1K</div>
-            <div class="stat-card__label">Starting Capital</div>
-          </div>
-          <div class="stat-card reveal reveal-delay-3">
-            <div class="stat-card__number">3</div>
-            <div class="stat-card__label">Loan Products Available</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-       MISSION SECTION
-       Mission statement with visual layout
-  ====================================================== -->
-    <section class="section section--alt">
-      <div class="container">
-        <div
-          style="
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-          "
-        >
-          <!-- Visual side -->
-          <div class="reveal">
-            <div
-              style="
-                background: var(--color-navy);
-                border-radius: var(--radius-xl);
-                padding: 3rem;
-                color: white;
-                position: relative;
-                overflow: hidden;
-              "
-            >
-              <!-- Decorative circle -->
-              <div
-                style="
-                  position: absolute;
-                  top: -40px;
-                  right: -40px;
-                  width: 200px;
-                  height: 200px;
-                  background: rgba(26, 86, 168, 0.3);
-                  border-radius: 50%;
-                "
-              ></div>
-              <div
-                style="
-                  position: absolute;
-                  bottom: -30px;
-                  left: -30px;
-                  width: 140px;
-                  height: 140px;
-                  background: rgba(45, 125, 210, 0.2);
-                  border-radius: 50%;
-                "
-              ></div>
-
-              <div style="position: relative; z-index: 1">
-                <p
-                  style="
-                    font-size: 0.72rem;
-                    text-transform: uppercase;
-                    letter-spacing: 0.12em;
-                    color: rgba(255, 255, 255, 0.5);
-                    font-weight: 700;
-                    margin-bottom: 1rem;
-                  "
-                >
-                  Our Mission
-                </p>
-                <blockquote
-                  style="
-                    font-family: var(--font-heading);
-                    font-size: 1.35rem;
-                    font-weight: 600;
-                    line-height: 1.5;
-                    color: white;
-                    border: none;
-                    padding: 0;
-                    margin: 0 0 1.5rem;
-                  "
-                >
-                  "To foster financial accessibility to women who are into
-                  business but are widowed or orphaned by natural or other
-                  circumstances."
-                </blockquote>
-                <p
-                  style="
-                    font-size: 0.85rem;
-                    color: rgba(255, 255, 255, 0.55);
-                    margin: 0;
-                  "
-                >
-                  — Kick Poverty Microfinance
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Text side -->
-          <div class="reveal reveal-delay-2">
-            <span class="section-label">The Story Behind It</span>
-            <h2 class="section-title mt-md">The Birth of Kick Poverty</h2>
-            <p>
-              While fulfilling its core humanitarian mandate, CHEND encountered
-              a recurring theme: communities lacked not just support — they
-              lacked access to financial and knowledge capital to sustain
-              themselves.
-            </p>
-            <p>
-              Following holistic research, the Council established
-              <strong>Kick Poverty Microfinance</strong> as a subsidiary. The
-              scheme was built to provide soft loans to women in business,
-              youths seeking college fees, and property owners who need
-              structured financial assistance.
-            </p>
-            <p>
-              The concept was initiated by <strong>Mariama Farmah</strong>,
-              supported and sponsored by
-              <strong>Dr. Moses Simon (PhD, DBA)</strong>, who solely owns and
-              leads the company today.
-            </p>
-            <a href="pages/about.html" class="btn btn--outline-dark mt-lg"
-              >Meet the Team →</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-       CTA BAND
-       Call to action — invest or apply
-  ====================================================== -->
-    <section class="cta-band" aria-label="Call to action">
-      <div class="container">
-        <h2>Ready to Partner With Us?</h2>
-        <p>
-          Whether you're seeking a loan, looking to invest, or want to learn
-          more about our programs — we'd love to hear from you.
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">What We Do</span>
+        <h2 id="programs-heading">Our Core Programmes</h2>
+        <p class="lead mt-md">
+          Structured interventions designed to build capacity, promote enterprise, and
+          strengthen community resilience.
         </p>
-        <div class="cta-band__actions">
-          <a href="pages/investors.html" class="btn btn--outline btn--lg"
-            >Investment Opportunities</a
-          >
-          <a
-            href="pages/contact.html"
-            class="btn btn--primary btn--lg"
-            style="background: white; color: var(--color-blue)"
-            >Contact Us Today</a
-          >
-        </div>
       </div>
-    </section>
 
-    <!-- =====================================================
-       FOOTER
-       Navigation, contact details, copyright
-  ====================================================== -->
-    <footer class="footer" role="contentinfo">
-      <div class="container">
-        <div class="footer__grid">
-          <!-- Brand column -->
-          <div>
-            <a
-              href="index.html"
-              class="navbar__logo"
-              style="margin-bottom: 1rem"
-            >
-              <div class="navbar__logo-icon">🌍</div>
-              <div class="navbar__logo-text">
-                <span class="navbar__logo-main">CHEND</span>
-                <span class="navbar__logo-sub">Kick Poverty Microfinance</span>
-              </div>
-            </a>
-            <p class="footer__brand-desc">
-              The Council for Humanitarian Empowerment &amp; Natural Disasters —
-              transforming lives through training, consultancy, and accessible
-              microfinance.
-            </p>
-            <div class="footer__contact-item">
-              <span>📍</span>
-              <span
-                >Four Mile, Masiaka Highway, Newton, Waterloo, Western Area
-                Rural District</span
-              >
-            </div>
+      <!-- 3-column icon cards grid; stagger animation via JS -->
+      <div class="grid-3 stagger-grid">
+
+        <!-- Card 1: Training Programmes -->
+        <div class="icon-card animate-in">
+          <div class="icon-card__icon" aria-hidden="true">
+            <!-- Graduation cap icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3.4 2 8.6 2 12 0v-5"/>
+            </svg>
           </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h4 class="footer__col-title">Quick Links</h4>
-            <ul class="footer__links">
-              <li><a href="index.html" class="footer__link">Home</a></li>
-              <li><a href="pages/about.html" class="footer__link">About CHEND</a></li>
-              <li>
-                <a href="pages/microfinance.html" class="footer__link"
-                  >Microfinance</a
-                >
-              </li>
-              <li>
-                <a href="pages/investors.html" class="footer__link">Investors</a>
-              </li>
-              <li><a href="pages/contact.html" class="footer__link">Contact</a></li>
-            </ul>
-          </div>
-
-          <!-- Services -->
-          <div>
-            <h4 class="footer__col-title">Services</h4>
-            <ul class="footer__links">
-              <li>
-                <a href="pages/microfinance.html" class="footer__link"
-                  >Business Loans</a
-                >
-              </li>
-              <li>
-                <a href="pages/microfinance.html" class="footer__link"
-                  >Education Loans</a
-                >
-              </li>
-              <li>
-                <a href="pages/microfinance.html" class="footer__link"
-                  >Property Loans</a
-                >
-              </li>
-              <li>
-                <a href="pages/about.html" class="footer__link">SME Consultancy</a>
-              </li>
-              <li>
-                <a href="pages/about.html" class="footer__link">Training Programs</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div>
-            <h4 class="footer__col-title">Contact</h4>
-            <div class="footer__contact-item">
-              <span>📞</span>
-              <span>+232 30 651 955</span>
-            </div>
-            <div class="footer__contact-item">
-              <span>📞</span>
-              <span>+232 79 179 161</span>
-            </div>
-            <div class="footer__contact-item">
-              <span>📱</span>
-              <span>+232 80 462 376 (WhatsApp)</span>
-            </div>
-            <div class="footer__contact-item" style="margin-top: 1rem">
-              <span>👤</span>
-              <span>Dr. Moses Simon — CEO</span>
-            </div>
-            <div class="footer__contact-item">
-              <span>👤</span>
-              <span>Ms. Mariama Farmah — Dir. Credits</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom bar -->
-        <div class="footer__bottom">
-          <p class="footer__copyright">
-            &copy; <span id="currentYear"></span> CHEND &amp; Kick Poverty
-            Microfinance. All rights reserved.
+          <p class="icon-card__title">Structured Training Programmes</p>
+          <p class="icon-card__text">
+            Competency-based training for individuals and enterprises across vocational,
+            entrepreneurial, and professional development tracks, tailored for SMEs and
+            corporate institutions.
           </p>
-          <div class="footer__bottom-links">
-            <a href="#" class="footer__bottom-link">Privacy Policy</a>
-            <a href="#" class="footer__bottom-link">Terms of Use</a>
-            <a href="pages/contact.html" class="footer__bottom-link">Contact</a>
+        </div>
+
+        <!-- Card 2: Consultancy Services -->
+        <div class="icon-card animate-in">
+          <div class="icon-card__icon" aria-hidden="true">
+            <!-- Briefcase icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              <line x1="12" y1="12" x2="12" y2="12.01"/>
+              <path d="M2 12a20 20 0 0 0 20 0"/>
+            </svg>
+          </div>
+          <p class="icon-card__title">Corporate Consultancy</p>
+          <p class="icon-card__text">
+            Expert advisory services helping small businesses, NGOs, and corporate organisations
+            solve strategic challenges and strengthen operations through evidence-based
+            recommendations.
+          </p>
+        </div>
+
+        <!-- Card 3: Microfinance / Knowledge Capital -->
+        <div class="icon-card animate-in">
+          <div class="icon-card__icon" aria-hidden="true">
+            <!-- Coins / finance icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <p class="icon-card__title">Microfinance &amp; Financial Access</p>
+          <p class="icon-card__text">
+            Through our subsidiary Kick Poverty Microfinance, we provide soft loans to women in
+            business, youths needing college fees, and property owners — making financial capital
+            accessible to those most in need.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       BENEFICIARIES SECTION
+       ======================================================== -->
+  <section class="section" id="beneficiaries" aria-labelledby="bene-heading">
+    <div class="container">
+
+      <div class="grid-2" style="gap: 3rem; align-items: start;">
+
+        <!-- Left: section header + intro copy -->
+        <div>
+          <span class="section-eyebrow">Who We Serve</span>
+          <h2 id="bene-heading">Our Target Beneficiaries</h2>
+          <p class="lead mt-md">
+            CHEND's work is centred on the most vulnerable members of our society.
+            Every programme, consultancy, and financial service is designed with their
+            needs at the forefront.
+          </p>
+          <p class="text-muted mt-md">
+            We believe that meaningful empowerment starts by meeting people where they are —
+            providing resources, skills, and financial tools that create lasting change
+            at the individual, household, and community levels.
+          </p>
+        </div>
+
+        <!-- Right: bullet list card for target groups -->
+        <div class="list-card animate-in">
+          <!-- Each list item corresponds to an official target beneficiary group -->
+          <div class="list-card__item">
+            <span class="list-card__bullet" aria-hidden="true"></span>
+            <p class="list-card__text"><strong>Orphans</strong> — children without parental support who need educational and welfare assistance.</p>
+          </div>
+          <div class="list-card__item">
+            <span class="list-card__bullet" aria-hidden="true"></span>
+            <p class="list-card__text"><strong>Widows</strong> — women who have lost their spouses and require economic and psychosocial support.</p>
+          </div>
+          <div class="list-card__item">
+            <span class="list-card__bullet" aria-hidden="true"></span>
+            <p class="list-card__text"><strong>People Living with Disability</strong> — individuals requiring inclusive support and livelihood opportunities.</p>
+          </div>
+          <div class="list-card__item">
+            <span class="list-card__bullet" aria-hidden="true"></span>
+            <p class="list-card__text"><strong>The Aged (75 years &amp; above)</strong> — elderly persons in need of welfare and dignity-centred care.</p>
+          </div>
+          <div class="list-card__item">
+            <span class="list-card__bullet" aria-hidden="true"></span>
+            <p class="list-card__text"><strong>School-Going Children from Deprived Financial Backgrounds</strong> — learners whose education is threatened by poverty.</p>
           </div>
         </div>
+
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- WhatsApp floating button -->
-    <a
-      href="https://wa.me/23279179161"
-      class="whatsapp-float"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
-      title="Chat with us on WhatsApp"
-      >💬</a
-    >
 
-    <!-- Main JavaScript -->
-    <script src="js/main.js"></script>
+  <!-- ========================================================
+       KICK POVERTY CALLOUT BAND — Cross-link to subsidiary
+       ======================================================== -->
+  <section class="stat-band" aria-label="Kick Poverty Microfinance callout">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:2rem;">
 
-    <!-- Show CTA in nav on larger screens -->
-    <script>
-      if (window.innerWidth >= 768) {
-        document.getElementById("navCTA").style.display = "inline-flex";
-      }
-    </script>
-  </body>
+        <div>
+          <span class="section-eyebrow section-eyebrow--white mb-sm" style="display:block;">Our Subsidiary</span>
+          <h2 style="color:#fff; margin-bottom:0.5rem;">Kick Poverty Microfinance</h2>
+          <p style="color:rgba(255,255,255,0.65); max-width:520px; margin-bottom:0;">
+            Born from the Council's discovery of the need for financial capital, Kick Po provides
+            soft loans to women in business, youths for college fees, and property owners.
+          </p>
+        </div>
+
+        <a href="pages/kickpoverty.html" class="btn btn--primary btn--lg" style="flex-shrink:0;">
+          View Kick Po Website &rarr;
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       CONTACT SECTION — WhatsApp Buttons
+       ======================================================== -->
+  <section class="contact-bar section--sm" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+
+      <div class="section-header section-header--center mb-xl">
+        <span class="section-eyebrow">Get in Touch</span>
+        <h2 id="contact-heading">Contact CHEND Council</h2>
+        <p class="lead mt-md" style="max-width:520px; margin-inline:auto;">
+          Reach out to us directly on WhatsApp — no forms, just a real conversation.
+        </p>
+      </div>
+
+      <div class="contact-bar__grid">
+
+        <!-- Dr. Moses Simon -->
+        <div class="card animate-in" style="text-align:center; padding: 2rem;">
+          <div style="width:56px;height:56px;background:var(--color-navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:var(--font-display);font-weight:700;color:#fff;font-size:1rem;">MS</div>
+          <h4 style="margin-bottom:0.25rem;">Dr. Moses Simon</h4>
+          <p style="font-size:0.82rem;color:var(--color-text-muted);margin-bottom:1.25rem;">Chief Executive Director</p>
+          <a href="https://wa.me/23279179161?text=Hello%20Dr.%20Moses%2C%20I%20am%20reaching%20out%20from%20the%20CHEND%20Council%20website." target="_blank" rel="noopener noreferrer"
+            class="btn btn--primary" style="width:100%;justify-content:center;gap:0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <p style="font-size:0.78rem;color:var(--color-text-muted);margin-top:0.75rem;margin-bottom:0;">+232 79 179 161</p>
+        </div>
+
+        <!-- General Enquiries -->
+        <div class="card animate-in" style="text-align:center; padding: 2rem;">
+          <div style="width:56px;height:56px;background:var(--color-blue);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          </div>
+          <h4 style="margin-bottom:0.25rem;">General Enquiries</h4>
+          <p style="font-size:0.82rem;color:var(--color-text-muted);margin-bottom:1.25rem;">Training, consultancy &amp; programmes</p>
+          <a href="https://wa.me/23230651955?text=Hello%2C%20I%20am%20contacting%20CHEND%20Council%20from%20your%20website." target="_blank" rel="noopener noreferrer"
+            class="btn btn--primary" style="width:100%;justify-content:center;gap:0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <p style="font-size:0.78rem;color:var(--color-text-muted);margin-top:0.75rem;margin-bottom:0;">+232 30 651 955</p>
+        </div>
+
+        <!-- Address -->
+        <div class="card animate-in" style="text-align:center; padding: 2rem;">
+          <div style="width:56px;height:56px;background:var(--color-gray-100,#f3f4f6);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4 style="margin-bottom:0.25rem;">Our Office</h4>
+          <p style="font-size:0.88rem;color:var(--color-text-muted);margin-bottom:1.25rem;">Four Mile, Masiaka Highway,<br>Newton, Waterloo,<br>Western Area Rural, Sierra Leone</p>
+          <a href="https://wa.me/23280462376?text=Hello%2C%20I%20would%20like%20to%20visit%20your%20CHEND%20Council%20office." target="_blank" rel="noopener noreferrer"
+            class="btn btn--outline" style="width:100%;justify-content:center;gap:0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp for Directions
+          </a>
+          <p style="font-size:0.78rem;color:var(--color-text-muted);margin-top:0.75rem;margin-bottom:0;">+232 80 462 376</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <!-- Brand column -->
+        <div>
+          <p class="footer__brand-name">CHEND Council</p>
+          <p class="footer__brand-desc">
+            Council for Humanitarian Empowerment &amp; Natural Disasters — addressing human
+            capital challenges through training, consultancy, and financial access.
+          </p>
+          <a href="pages/kickpoverty.html" class="btn btn--outline" style="font-size:0.82rem; padding:0.5rem 1rem;">
+            Kick Po Microfinance &rarr;
+          </a>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <p class="footer__col-title">Quick Links</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About CHEND</a></li>
+            <li><a href="#programs">Our Programs</a></li>
+            <li><a href="#beneficiaries">Beneficiaries</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Subsidiary links -->
+        <div>
+          <p class="footer__col-title">Kick Po Microfinance</p>
+          <ul class="footer__links">
+            <li><a href="pages/kickpoverty.html">Overview</a></li>
+            <li><a href="kickpoverty.html#about">About Kick Po</a></li>
+            <li><a href="kickpoverty.html#loans">Loan Products</a></li>
+            <li><a href="kickpoverty.html#investors">Invest With Us</a></li>
+            <li><a href="kickpoverty.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact column -->
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="tel:+23230651955">+232 30 651 955</a></li>
+            <li><a href="tel:+23279179161">+232 79 179 161</a></li>
+            <li><a href="tel:+23280462376">+232 80 462 376</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom bar -->
+      <div class="footer__bottom">
+        <p>&copy; 2025 CHEND Council. All rights reserved.</p>
+        <p>Registered with the Corporate Affairs Commission of Sierra Leone.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top" title="Back to top" style="
+    position:fixed; bottom:2rem; right:2rem; z-index:999;
+    width:44px; height:44px; border-radius:50%;
+    background:var(--color-navy); color:#fff; border:none;
+    cursor:pointer; display:none; align-items:center; justify-content:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25); transition:opacity 0.3s, transform 0.3s;
+  ">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+  <script>
+    const btn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    }, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+
+  <!-- Shared JS -->
+  <script src="js/main.js"></script>
+</body>
 </html>

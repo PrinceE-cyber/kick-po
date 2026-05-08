@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kick Poverty (Kick Po) Microfinance Company — soft loans for women in business, youths for college fees, and property owners in Sierra Leone." />
+  <title>Kick Poverty Microfinance — Soft Loans, Financial Access, Sierra Leone</title>
+
+  <!-- Google Fonts: Playfair Display (display) + Source Sans 3 (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       NAVIGATION BAR
+       ======================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container navbar__inner">
+
+      <!-- Logo / brand mark -->
+      <a href="kickpoverty.html" class="navbar__logo" aria-label="Kick Poverty Microfinance home">
+        <div class="navbar__logo-icon" aria-hidden="true">
+          <!-- Upward arrow symbolising financial growth / lifting out of poverty -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="white">
+            <path d="M10 2l7 7h-4v9H7V9H3l7-7z"/>
+          </svg>
+        </div>
+        <div class="navbar__logo-text">
+          Kick Po Microfinance
+          <span>A CHEND Council Subsidiary</span>
+        </div>
+      </a>
+
+      <!-- Desktop navigation links -->
+      <nav class="navbar__links" role="navigation" aria-label="Main navigation">
+        <a href="kickpoverty.html" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#loans">Loan Products</a>
+        <a href="#team">Our Team</a>
+        <a href="#investors">Investors</a>
+        <a href="#contact">Contact</a>
+        <!-- Back-link to parent organisation -->
+        <a href="../index.html" class="navbar__cta">CHEND Council &rarr;</a>
+      </nav>
+
+      <!-- Hamburger toggle for mobile -->
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ========================================================
+       HERO SECTION
+       ======================================================== -->
+  <section class="hero" aria-labelledby="kp-hero-heading">
+    <div class="container hero__inner">
+
+      <!-- Left: headline + copy + CTAs -->
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          Established January 2024 · Sierra Leone
+        </div>
+
+        <h1 id="kp-hero-heading">
+          <em>Kick Poverty</em><br />
+          Microfinance Company
+        </h1>
+
+        <p class="hero__desc">
+          Fast, accessible soft loans for women in business, youths pursuing college education,
+          and property owners. Empowering communities one loan at a time since 2024.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#loans" class="btn btn--primary btn--lg">Explore Loan Products</a>
+          <a href="#investors" class="btn btn--outline-white btn--lg">Invest With Us</a>
+        </div>
+      </div>
+
+      <!-- Right: key highlights card (hidden on small mobile via CSS) -->
+      <div class="hero__visual" aria-hidden="true">
+        <p class="hero__visual-title">At a Glance</p>
+        <div class="hero__stat-row">
+          <!-- Key financial highlights -->
+          <div class="hero__stat">
+            <div class="hero__stat-value">30%</div>
+            <div class="hero__stat-label">Annual Interest Rate</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">20%</div>
+            <div class="hero__stat-label">Investor Annual Return</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">3</div>
+            <div class="hero__stat-label">Loan Product Types</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">6+</div>
+            <div class="hero__stat-label">Staff Members</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       STATS / METRICS BAND
+       ======================================================== -->
+  <div class="stat-band" aria-label="Key company metrics">
+    <div class="container">
+      <div class="stat-band__grid">
+
+        <!-- Metric 1: Start date -->
+        <div class="stat-band__item">
+          <div class="stat-band__value">2024</div>
+          <div class="stat-band__label">Year Founded</div>
+        </div>
+
+        <!-- Metric 2: Investor return -->
+        <div class="stat-band__item">
+          <div class="stat-band__value">20%</div>
+          <div class="stat-band__label">Investor Annual Return</div>
+        </div>
+
+        <!-- Metric 3: Interest rate on loans -->
+        <div class="stat-band__item">
+          <div class="stat-band__value">30%</div>
+          <div class="stat-band__label">Loan Interest Rate p.a.</div>
+        </div>
+
+        <!-- Metric 4: Minimum investment entry -->
+        <div class="stat-band__item">
+          <div class="stat-band__value">USD 10K</div>
+          <div class="stat-band__label">Minimum Investment</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================
+       ABOUT SECTION
+       ======================================================== -->
+  <section class="section" id="about" aria-labelledby="kp-about-heading">
+    <div class="container">
+
+      <div class="grid-2" style="align-items:start; gap: 3.5rem;">
+
+        <!-- Left: narrative copy -->
+        <div>
+          <span class="section-eyebrow">About Kick Po</span>
+          <h2 id="kp-about-heading">Bridging the Financial Gap for Those Who Need It Most</h2>
+
+          <p class="lead mt-md">
+            Kick Poverty (Kick Po) Microfinance Company started in January 2024 with a skeletal
+            staff and minimal resources — but a clear, powerful mission.
+          </p>
+          <p class="text-muted mt-md">
+            The idea was born from a simple observation: too many hardworking people in our
+            communities — especially women entrepreneurs and young people — are excluded from
+            traditional financial services. Kick Po was established to change that, facilitating
+            quicker access to small loans in business settings and emergency situations.
+          </p>
+          <p class="text-muted">
+            The concept was initiated by <strong>Mariama Farmah</strong> and supported and
+            sponsored by <strong>Dr. Moses Simon</strong>. The company is solely owned by
+            Moses Simon (PhD, DBA).
+          </p>
+
+          <!-- Registration badge -->
+          <div class="highlight-card mt-xl">
+            <span class="tag tag--blue mb-md" style="display:inline-block;">Fully Registered</span>
+            <p style="font-size:0.9rem; color: var(--color-text-muted); margin-bottom:0;">
+              Kick Po Microfinance is fully registered with the <strong>Corporate Affairs
+              Commission</strong> and other national statutory financial regulatory authorities
+              in Sierra Leone.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: mission card + address card stacked -->
+        <div style="display:flex; flex-direction:column; gap: var(--space-lg);">
+
+          <!-- Mission highlight -->
+          <div class="highlight-card--navy highlight-card animate-in">
+            <span class="section-eyebrow section-eyebrow--white mb-sm" style="display:block;">Our Mission</span>
+            <h3>Foster Financial Accessibility to Women</h3>
+            <p>
+              Our mission is to foster financial accessibility to women who are into business
+              but are widowed or orphaned by natural or other circumstances.
+            </p>
+          </div>
+
+          <!-- Official address card -->
+          <div class="card animate-in" style="padding: var(--space-lg);">
+            <h4 style="margin-bottom: var(--space-sm);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-right:6px; vertical-align:-2px; color:var(--color-blue)">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Official Address
+            </h4>
+            <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:0;">
+              Four Mile on Masiaka Highway,<br />
+              Newton, Waterloo,<br />
+              Western Area Rural District,<br />
+              Sierra Leone
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       LOAN PRODUCTS SECTION
+       ======================================================== -->
+  <section class="section section--alt" id="loans" aria-labelledby="loans-heading">
+    <div class="container">
+
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">What We Offer</span>
+        <h2 id="loans-heading">Our Loan Products</h2>
+        <p class="lead mt-md">
+          Kick Po offers three focused loan products designed for the real financial needs of
+          our community members.
+        </p>
+      </div>
+
+      <!-- 3-column loan product cards; stagger animation applied by JS -->
+      <div class="grid-3 stagger-grid">
+
+        <!-- Loan Product 1: Women in Business -->
+        <div class="icon-card animate-in">
+          <div class="icon-card__icon" aria-hidden="true">
+            <!-- Store / shop icon representing women entrepreneurs -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <p class="icon-card__title">Women in Business</p>
+          <p class="icon-card__text">
+            Soft loans tailored for women entrepreneurs — particularly widows and single mothers —
+            to start, sustain, or grow their businesses. Fast processing with minimal bureaucracy.
+          </p>
+          <div class="mt-lg">
+            <span class="tag tag--blue">Priority Loan</span>
+          </div>
+        </div>
+
+        <!-- Loan Product 2: College / Education Fees -->
+        <div class="icon-card animate-in">
+          <div class="icon-card__icon" aria-hidden="true">
+            <!-- Book / education icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <p class="icon-card__title">Youths — College Fees</p>
+          <p class="icon-card__text">
+            Education loans for young people who need financial support to pay college and
+            university fees. Invest in a generation — loans disbursed directly to cover
+            tuition and study-related costs.
+          </p>
+          <div class="mt-lg">
+            <span class="tag tag--navy">Youth Loan</span>
+          </div>
+        </div>
+
+        <!-- Loan Product 3: Property Loans -->
+        <div class="icon-card animate-in">
+          <div class="icon-card__icon" aria-hidden="true">
+            <!-- Building / property icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="1"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <p class="icon-card__title">Property Owners</p>
+          <p class="icon-card__text">
+            Property-backed loans for owners who need capital for renovation, development, or
+            other investment purposes. Collateral assessment ensures fair loan-to-value ratios
+            for exceptional amounts.
+          </p>
+          <div class="mt-lg">
+            <span class="tag tag--green">Secured Loan</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interest rate callout below loan cards -->
+      <div class="highlight-card mt-2xl animate-in" style="text-align:center; max-width:560px; margin-inline:auto;">
+        <h4 style="color:var(--color-navy); margin-bottom:var(--space-sm);">Loan Interest Rate</h4>
+        <p style="font-size:1.1rem; font-weight:700; color:var(--color-blue); margin-bottom:var(--space-sm);">30% per annum</p>
+        <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0;">
+          All applicants are properly screened to verify repayment capacity. Guarantors play
+          a key role, and collateral is required for exceptional / larger loan amounts.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       HOW IT WORKS — Loan Application Process
+       ======================================================== -->
+  <section class="section" id="process" aria-labelledby="process-heading">
+    <div class="container">
+
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">The Process</span>
+        <h2 id="process-heading">How to Apply for a Loan</h2>
+        <p class="lead mt-md">A straightforward, transparent process designed for accessibility.</p>
+      </div>
+
+      <!-- Process steps as a 4-column grid with numbered steps -->
+      <div class="grid-4 stagger-grid mt-2xl">
+
+        <!-- Step 1 -->
+        <div class="card animate-in" style="text-align:center;">
+          <div style="
+            width: 44px; height: 44px;
+            background: var(--color-navy);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+          " aria-hidden="true">1</div>
+          <h4>Contact Us</h4>
+          <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0;">
+            Reach out to our Credit Officers by phone or WhatsApp to express your interest
+            and discuss your needs.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="card animate-in" style="text-align:center;">
+          <div style="
+            width: 44px; height: 44px;
+            background: var(--color-navy);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+          " aria-hidden="true">2</div>
+          <h4>Submit Application</h4>
+          <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0;">
+            Complete the application with the required documentation. A guarantor will be
+            required to endorse your application.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="card animate-in" style="text-align:center;">
+          <div style="
+            width: 44px; height: 44px;
+            background: var(--color-navy);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+          " aria-hidden="true">3</div>
+          <h4>Screening &amp; Assessment</h4>
+          <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0;">
+            Our Credit Officers assess your capacity to repay. Larger loans include a collateral
+            review to protect both parties.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="card animate-in" style="text-align:center;">
+          <div style="
+            width: 44px; height: 44px;
+            background: var(--color-blue);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+          " aria-hidden="true">4</div>
+          <h4>Loan Disbursement</h4>
+          <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:0;">
+            Once approved, your loan is disbursed promptly — designed for speed, especially
+            in emergency financial situations.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       TEAM SECTION
+       ======================================================== -->
+  <section class="section section--alt" id="team" aria-labelledby="team-heading">
+    <div class="container">
+
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">Leadership</span>
+        <h2 id="team-heading">Our Team</h2>
+        <p class="lead mt-md">
+          A dedicated team of professionals committed to financial inclusion and community
+          empowerment.
+        </p>
+      </div>
+
+      <!-- Staff profile cards in a 3-column grid -->
+      <!-- Each card displays role, name, and initials-based avatar -->
+      <div class="grid-3 stagger-grid">
+
+        <!-- CEO -->
+        <div class="staff-card animate-in">
+          <div class="staff-card__avatar" aria-hidden="true">
+            <span class="staff-card__avatar-initials">MS</span>
+          </div>
+          <div class="staff-card__body">
+            <p class="staff-card__name">Dr. Moses Simon</p>
+            <p class="staff-card__role">Chief Executive Director</p>
+            <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:var(--space-sm); margin-bottom:0;">
+              PhD, DBA — Sole owner and founder of Kick Po Microfinance. Visionary leader
+              driving the company's mission of financial inclusion.
+            </p>
+          </div>
+        </div>
+
+        <!-- Deputy CEO -->
+        <div class="staff-card animate-in">
+          <div class="staff-card__avatar" aria-hidden="true">
+            <span class="staff-card__avatar-initials">JEA</span>
+          </div>
+          <div class="staff-card__body">
+            <p class="staff-card__name">Mr. John Ellie Amara</p>
+            <p class="staff-card__role">Deputy Chief Executive Director</p>
+            <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:var(--space-sm); margin-bottom:0;">
+              Supports the CEO in strategic operations and organisational management.
+            </p>
+          </div>
+        </div>
+
+        <!-- Director of Credits & Admin -->
+        <div class="staff-card animate-in">
+          <div class="staff-card__avatar" aria-hidden="true">
+            <span class="staff-card__avatar-initials">MF</span>
+          </div>
+          <div class="staff-card__body">
+            <p class="staff-card__name">Ms. Mariama Farmah</p>
+            <p class="staff-card__role">Director of Credits &amp; Administration</p>
+            <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:var(--space-sm); margin-bottom:0;">
+              Initiator of the Kick Po concept. Oversees all credit operations and
+              administrative functions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Credit Officer 1 -->
+        <div class="staff-card animate-in">
+          <div class="staff-card__avatar" aria-hidden="true">
+            <span class="staff-card__avatar-initials">SK</span>
+          </div>
+          <div class="staff-card__body">
+            <p class="staff-card__name">Salamatu Kalokoh</p>
+            <p class="staff-card__role">Credit Officer</p>
+            <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:var(--space-sm); margin-bottom:0;">
+              Manages loan applications and assessments for clients.
+            </p>
+          </div>
+        </div>
+
+        <!-- Credit Officer 2 -->
+        <div class="staff-card animate-in">
+          <div class="staff-card__avatar" aria-hidden="true">
+            <span class="staff-card__avatar-initials">PEB</span>
+          </div>
+          <div class="staff-card__body">
+            <p class="staff-card__name">Mr. Prince E. Bangura</p>
+            <p class="staff-card__role">Credit Officer</p>
+            <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:var(--space-sm); margin-bottom:0;">
+              Conducts client screening and supports loan disbursement processes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Credit Officer 3 -->
+        <div class="staff-card animate-in">
+          <div class="staff-card__avatar" aria-hidden="true">
+            <span class="staff-card__avatar-initials">IAK</span>
+          </div>
+          <div class="staff-card__body">
+            <p class="staff-card__name">Ms. Isata Alvina Kamara</p>
+            <p class="staff-card__role">Credit Officer</p>
+            <p style="font-size:0.82rem; color:var(--color-text-muted); margin-top:var(--space-sm); margin-bottom:0;">
+              Serves clients through loan assessments and relationship management.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       INVESTORS SECTION
+       ======================================================== -->
+  <section class="section section--dark" id="investors" aria-labelledby="invest-heading">
+    <div class="container">
+
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow section-eyebrow--white">Grow With Us</span>
+        <h2 id="invest-heading">Investment Opportunities</h2>
+        <p class="lead mt-md" style="color:rgba(255,255,255,0.65);">
+          Kick Po Microfinance is actively seeking investors who want both financial returns
+          and measurable social impact.
+        </p>
+      </div>
+
+      <!-- Two-column layout: table + summary card -->
+      <div class="grid-2 mt-2xl" style="gap: var(--space-2xl); align-items:start;">
+
+        <!-- Investment terms table -->
+        <div class="animate-in">
+          <h3 style="color:#93c5fd; margin-bottom:var(--space-lg);">Investment Terms</h3>
+          <div class="table-scroll">
+            <table class="invest-table" role="table" aria-label="Investment terms">
+              <thead>
+                <tr>
+                  <th scope="col">Term</th>
+                  <th scope="col">Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Each row covers one key investment condition -->
+                <tr>
+                  <td><strong>Annual Return</strong></td>
+                  <td>20% of total investment per year</td>
+                </tr>
+                <tr>
+                  <td><strong>Return Schedule</strong></td>
+                  <td>Cascaded after a minimum period of 3 months</td>
+                </tr>
+                <tr>
+                  <td><strong>Minimum Investment</strong></td>
+                  <td>Le 200,000 (NLe) / USD 10,000</td>
+                </tr>
+                <tr>
+                  <td><strong>Capital Guarantee</strong></td>
+                  <td>Full investment amount refunded at stipulated date</td>
+                </tr>
+                <tr>
+                  <td><strong>Agreement</strong></td>
+                  <td>Official agreement signed &amp; enforced per investment</td>
+                </tr>
+                <tr>
+                  <td><strong>Shareholder Eligibility</strong></td>
+                  <td>After 2-year investment with min. Le 500,000 / USD 25,000</td>
+                </tr>
+                <tr>
+                  <td><strong>Shares Allocation</strong></td>
+                  <td>Disclosed &amp; communicated before formal agreement</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Investor benefits summary card -->
+        <div style="display:flex; flex-direction:column; gap:var(--space-lg);">
+
+          <!-- Feature rows: key investor benefits -->
+          <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-lg); padding:var(--space-xl);" class="animate-in">
+
+            <h3 style="color:#93c5fd; margin-bottom:var(--space-lg);">Why Invest with Kick Po?</h3>
+
+            <!-- Benefit 1 -->
+            <div class="feature-row" style="border-color:rgba(255,255,255,0.08);">
+              <div class="feature-row__icon" style="background:rgba(26,86,219,0.35);" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                  <polyline points="17 6 23 6 23 12"/>
+                </svg>
+              </div>
+              <div class="feature-row__content">
+                <h4 style="color:#fff;">20% Annual Return</h4>
+                <p style="color:rgba(255,255,255,0.6);">Strong, consistent annual returns on your investment capital.</p>
+              </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="feature-row" style="border-color:rgba(255,255,255,0.08);">
+              <div class="feature-row__icon" style="background:rgba(26,86,219,0.35);" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+              <div class="feature-row__content">
+                <h4 style="color:#fff;">Capital Protected</h4>
+                <p style="color:rgba(255,255,255,0.6);">Your original investment is refunded in full at the agreed date.</p>
+              </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="feature-row" style="border-color:rgba(255,255,255,0.08);">
+              <div class="feature-row__icon" style="background:rgba(26,86,219,0.35);" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="feature-row__content">
+                <h4 style="color:#fff;">Pathway to Shareholding</h4>
+                <p style="color:rgba(255,255,255,0.6);">Qualify for shareholder status after a 2-year investment period.</p>
+              </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="feature-row" style="border-color:transparent;">
+              <div class="feature-row__icon" style="background:rgba(26,86,219,0.35);" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+              </div>
+              <div class="feature-row__content">
+                <h4 style="color:#fff;">Social Impact</h4>
+                <p style="color:rgba(255,255,255,0.6);">Your capital directly enables women, youths, and families to thrive.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CTA to contact for investment enquiries -->
+          <a href="#contact" class="btn btn--primary btn--lg" style="text-align:center;">
+            Express Investment Interest &rarr;
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       CONTACT SECTION
+       ======================================================== -->
+  <section class="contact-bar section--sm" id="contact" aria-labelledby="kp-contact-heading">
+    <div class="container">
+
+      <div class="section-header section-header--center mb-xl">
+        <span class="section-eyebrow">Reach Us</span>
+        <h2 id="kp-contact-heading">Contact Kick Po Microfinance</h2>
+        <p class="lead mt-md" style="max-width:520px; margin-inline:auto;">
+          For loan enquiries, investment interests, or general information — tap below to open a WhatsApp chat directly with our team.
+        </p>
+      </div>
+
+      <!-- WhatsApp contact cards -->
+      <div class="grid-3 stagger-grid mt-xl" style="max-width:900px; margin-inline:auto;">
+
+        <!-- Dr. Moses Simon -->
+        <div class="card animate-in" style="text-align:center; padding:var(--space-xl);">
+          <div style="width:56px;height:56px;background:var(--color-navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-md);">
+            <span style="font-family:var(--font-display);font-weight:700;color:#fff;font-size:0.9rem;">MS</span>
+          </div>
+          <h4 style="margin-bottom:0.2rem;">Dr. Moses Simon</h4>
+          <p style="font-size:0.8rem;color:var(--color-text-muted);margin-bottom:var(--space-lg);">CEO — Chief Executive Director</p>
+          <a href="https://wa.me/23279179161?text=Hello%20Dr.%20Moses%2C%20I%20am%20contacting%20you%20from%20the%20Kick%20Po%20website." target="_blank" rel="noopener noreferrer"
+             class="btn btn--primary" style="width:100%;justify-content:center;gap:0.5rem;display:flex;align-items:center;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <p style="font-size:0.75rem;color:var(--color-text-muted);margin-top:0.5rem;margin-bottom:0;">+232 79 179 161</p>
+        </div>
+
+        <!-- Ms. Mariama Farmah -->
+        <div class="card animate-in" style="text-align:center; padding:var(--space-xl);">
+          <div style="width:56px;height:56px;background:var(--color-blue);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-md);">
+            <span style="font-family:var(--font-display);font-weight:700;color:#fff;font-size:0.9rem;">MF</span>
+          </div>
+          <h4 style="margin-bottom:0.2rem;">Ms. Mariama Farmah</h4>
+          <p style="font-size:0.8rem;color:var(--color-text-muted);margin-bottom:var(--space-lg);">Director — Credits &amp; Administration</p>
+          <a href="https://wa.me/23280462376?text=Hello%20Ms.%20Farmah%2C%20I%20am%20contacting%20you%20from%20the%20Kick%20Po%20website." target="_blank" rel="noopener noreferrer"
+             class="btn btn--primary" style="width:100%;justify-content:center;gap:0.5rem;display:flex;align-items:center;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <p style="font-size:0.75rem;color:var(--color-text-muted);margin-top:0.5rem;margin-bottom:0;">+232 80 462 376</p>
+        </div>
+
+        <!-- General enquiry -->
+        <div class="card animate-in" style="text-align:center; padding:var(--space-xl);">
+          <div style="width:56px;height:56px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-md);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          </div>
+          <h4 style="margin-bottom:0.2rem;">General Enquiry</h4>
+          <p style="font-size:0.8rem;color:var(--color-text-muted);margin-bottom:var(--space-lg);">Loans, Investments &amp; General Info</p>
+          <a href="https://wa.me/23230651955?text=Hello%2C%20I%20found%20you%20on%20the%20Kick%20Po%20website%20and%20would%20like%20more%20information." target="_blank" rel="noopener noreferrer"
+             class="btn btn--primary" style="width:100%;justify-content:center;gap:0.5rem;display:flex;align-items:center;background:#16a34a;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <p style="font-size:0.75rem;color:var(--color-text-muted);margin-top:0.5rem;margin-bottom:0;">+232 30 651 955</p>
+        </div>
+
+      </div>
+
+      <!-- Address strip -->
+      <div style="text-align:center; margin-top:var(--space-2xl);">
+        <p style="font-size:0.88rem; color:var(--color-text-muted);">
+          📍 <strong>Office:</strong> Four Mile on Masiaka Highway, Newton, Waterloo, Western Area Rural District, Sierra Leone
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       PARENT ORGANISATION CALLOUT
+       ======================================================== -->
+  <section class="section--sm" style="background: var(--color-gray-50); border-top: 1px solid var(--color-gray-200);" aria-label="Parent organisation">
+    <div class="container" style="text-align:center; padding-block: var(--space-2xl);">
+      <p style="font-size:0.82rem; letter-spacing:0.07em; text-transform:uppercase; font-weight:700; color:var(--color-text-muted); margin-bottom:var(--space-sm);">
+        A Subsidiary of
+      </p>
+      <h3 style="margin-bottom:var(--space-md);">
+        Council for Humanitarian Empowerment &amp; Natural Disasters
+      </h3>
+      <p class="text-muted" style="max-width:520px; margin-inline:auto; margin-bottom:var(--space-xl);">
+        Kick Po Microfinance was established by CHEND Council after identifying the critical need
+        for financial capital in the communities the Council serves.
+      </p>
+      <a href="../index.html" class="btn btn--outline">Visit CHEND Council Website &rarr;</a>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <!-- Brand column -->
+        <div>
+          <p class="footer__brand-name">Kick Poverty Microfinance</p>
+          <p class="footer__brand-desc">
+            Soft loans for women in business, youths for college fees, and property owners.
+            Empowering communities across Sierra Leone since January 2024.
+          </p>
+          <a href="../index.html" class="btn btn--outline" style="font-size:0.82rem; padding:0.5rem 1rem;">
+            CHEND Council &rarr;
+          </a>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <p class="footer__col-title">Quick Links</p>
+          <ul class="footer__links">
+            <li><a href="kickpoverty.html">Home</a></li>
+            <li><a href="#about">About Kick Po</a></li>
+            <li><a href="#loans">Loan Products</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#investors">Investors</a></li>
+          </ul>
+        </div>
+
+        <!-- Loan products links -->
+        <div>
+          <p class="footer__col-title">Loan Products</p>
+          <ul class="footer__links">
+            <li><a href="#loans">Women in Business</a></li>
+            <li><a href="#loans">Youth College Fees</a></li>
+            <li><a href="#loans">Property Loans</a></li>
+            <li><a href="#process">How to Apply</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="tel:+23230651955">+232 30 651 955</a></li>
+            <li><a href="https://wa.me/23279179161">WhatsApp: +232 79 179 161</a></li>
+            <li><a href="https://wa.me/23280462376">WhatsApp: +232 80 462 376</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom bar -->
+      <div class="footer__bottom">
+        <p>&copy; 2025 Kick Poverty Microfinance. A CHEND Council Subsidiary.</p>
+        <p>Registered — Corporate Affairs Commission, Sierra Leone.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top" title="Back to top" style="position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;background:var(--color-navy);color:#fff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,0.25);opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s;z-index:999;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Shared JS -->
+  <script src="../js/main.js"></script>
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) { btt.style.opacity='1'; btt.style.transform='translateY(0)'; }
+      else { btt.style.opacity='0'; btt.style.transform='translateY(12px)'; }
+    }, { passive: true });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
