@@ -1,251 +1,332 @@
 <!DOCTYPE html>
-<!--
-  ================================================================
-  KICK POVERTY — INVESTORS PAGE
-  ================================================================
-  File:        pages/investors.html
-  Description: Investment terms, returns, shareholder pathway,
-               and minimum investment details.
-  ================================================================
--->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Invest in Kick Poverty Microfinance — 20% annual returns, minimum Le200,000. Official agreements for all investments.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Invest in Kick Poverty Microfinance — 20% annual return on investment, fully registered, with transparent shareholder terms and official agreements." />
   <title>Investors | Kick Poverty Microfinance</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    /* -------------------------------------------------------
-       PAGE-SPECIFIC: Investment tier comparison
-    ------------------------------------------------------- */
-    .tier-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-5);
-    }
 
-    @media (min-width: 640px) {
-      .tier-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .tier-card {
-      border: 2px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      padding: var(--space-8) var(--space-6);
-      background: var(--color-surface);
-      transition: border-color var(--transition-base), transform var(--transition-base);
-    }
-
-    .tier-card:hover {
-      border-color: var(--color-accent);
-      transform: translateY(-4px);
-    }
-
-    .tier-card--featured {
-      border-color: var(--color-accent);
-      background: var(--color-accent-pale);
-      position: relative;
-    }
-
-    .tier-badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--color-accent);
-      color: white;
-      font-size: var(--text-xs);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: var(--space-1) var(--space-4);
-      border-radius: var(--radius-full);
-      white-space: nowrap;
-    }
-
-    .tier-amount {
-      font-family: var(--font-display);
-      font-size: var(--text-3xl);
-      font-weight: 700;
-      color: var(--color-text-primary);
-      line-height: 1;
-      margin-bottom: var(--space-1);
-    }
-
-    .tier-usd {
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
-      margin-bottom: var(--space-5);
-    }
-
-    .tier-feature {
-      display: flex;
-      gap: var(--space-3);
-      align-items: flex-start;
-      padding: var(--space-3) 0;
-      border-bottom: 1px solid var(--color-border);
-      font-size: var(--text-sm);
-      color: var(--color-text-body);
-    }
-
-    .tier-feature:last-child {
-      border-bottom: none;
-    }
-
-    .tier-feature::before {
-      content: '✓';
-      color: var(--color-accent);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body id="top">
+<body>
 
-  <div id="nav-placeholder"></div>
+  <!-- =====================================================
+       NAVIGATION BAR
+  ====================================================== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container container--wide">
+      <div class="navbar__inner">
+        <a href="../index.html" class="navbar__logo" aria-label="CHEND Home">
+          <div class="navbar__logo-icon">🌍</div>
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-main">CHEND</span>
+            <span class="navbar__logo-sub">Kick Poverty Microfinance</span>
+          </div>
+        </a>
+        <ul class="navbar__links" role="list">
+          <li><a href="../index.html"        class="navbar__link">Home</a></li>
+          <li><a href="about.html"        class="navbar__link">About</a></li>
+          <li><a href="microfinance.html" class="navbar__link">Microfinance</a></li>
+          <li><a href="investors.html"    class="navbar__link active">Investors</a></li>
+          <li><a href="contact.html"      class="navbar__link">Contact</a></li>
+        </ul>
+        <div class="flex" style="align-items:center; gap:1rem;">
+          <a href="contact.html" class="btn btn--primary navbar__cta" id="navCTA" style="display:none;">Invest Now</a>
+          <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="navbar__mobile-menu" id="mobileMenu" aria-hidden="true" role="menu">
+      <a href="../index.html"        class="navbar__mobile-link">Home</a>
+      <a href="about.html"        class="navbar__mobile-link">About Us</a>
+      <a href="microfinance.html" class="navbar__mobile-link">Microfinance</a>
+      <a href="investors.html"    class="navbar__mobile-link">Investors</a>
+      <a href="contact.html"      class="navbar__mobile-link">Contact</a>
+      <a href="contact.html" class="btn btn--primary w-full mt-md" style="justify-content:center;">Invest Now</a>
+    </div>
+  </nav>
 
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
+  <!-- =====================================================
+       PAGE HERO
+  ====================================================== -->
+  <section class="page-hero" aria-labelledby="pageTitle">
     <div class="container">
-      <span class="eyebrow page-hero__eyebrow">Grow With Us</span>
-      <h1>Investor Opportunities</h1>
-      <p class="page-hero__lead lead">
-        Earn guaranteed annual returns while directly funding
-        financial inclusion for communities in Sierra Leone.
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb__sep">›</span>
+        <span>Investors</span>
+      </nav>
+      <p class="page-hero__label">Investment Opportunities</p>
+      <h1 class="page-hero__title" id="pageTitle">Invest in Impact.<br />Earn Strong Returns.</h1>
+      <p class="page-hero__subtitle">
+        Kick Poverty Microfinance welcomes investors seeking financially rewarding partnerships
+        that also make a meaningful difference in Sierra Leone's communities.
       </p>
     </div>
   </section>
 
-
-  <!-- ===========================================================
-       WHY INVEST SECTION
-  =========================================================== -->
-  <section class="section" aria-labelledby="why-heading">
+  <!-- =====================================================
+       WHY INVEST OVERVIEW
+  ====================================================== -->
+  <section class="section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow">Why Invest</span>
-        <h2 id="why-heading">A Transparent, Purpose-Led Investment</h2>
-        <p class="lead">
-          Kick Poverty currently has no shareholders — this is your
-          opportunity to be an early investor in a growing, registered
-          microfinance company with clear, structured returns.
+        <span class="section-label">Why Invest With Us</span>
+        <h2 class="section-title section-title--underlined mt-md">A Compelling Opportunity</h2>
+        <p class="section-subtitle">
+          Kick Poverty Microfinance is actively seeking investors. As at present, the company
+          has no shareholders yet — meaning early investors will enter at ground level with
+          the best terms and highest potential for growth.
         </p>
       </div>
 
-      <div class="cards-grid reveal-stagger">
-        <div class="card">
-          <div class="card__icon" aria-hidden="true">💰</div>
+      <div class="grid grid--3">
+        <div class="card reveal">
+          <div class="card__icon">📈</div>
           <h3 class="card__title">20% Annual Return</h3>
-          <p>Investors receive 20% of their total financial investment on an annual basis, cascaded after a minimum of three months.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon" aria-hidden="true">📝</div>
-          <h3 class="card__title">Formal Agreement</h3>
-          <p>An official, legally enforceable agreement is signed and enforced for each and every investment made.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon" aria-hidden="true">🔄</div>
-          <h3 class="card__title">Full Capital Return</h3>
-          <p>The actual amount invested will be refunded in full on or at the stipulated date and time agreed upon.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===========================================================
-       INVESTMENT TIERS — alt background
-  =========================================================== -->
-  <section class="section section--alt" aria-labelledby="tiers-heading">
-    <div class="container container--narrow">
-      <div class="section-header section-header--center reveal">
-        <span class="eyebrow">Investment Levels</span>
-        <h2 id="tiers-heading">Choose Your Investment Level</h2>
-      </div>
-
-      <div class="tier-grid reveal-stagger">
-
-        <!-- Standard Investor -->
-        <div class="tier-card">
-          <div class="eyebrow" style="margin-bottom: var(--space-3);">Standard Investor</div>
-          <div class="tier-amount">Le 200,000</div>
-          <div class="tier-usd">≈ USD 10,000 minimum</div>
-          <div class="tier-feature">20% annual return on investment</div>
-          <div class="tier-feature">Returns cascaded after 3+ months</div>
-          <div class="tier-feature">Official signed agreement</div>
-          <div class="tier-feature">Full capital refunded at term end</div>
-          <div class="tier-feature">Investor status maintained</div>
-          <br>
-          <a href="contact.html" class="btn btn--outline" style="width:100%; justify-content:center;">Enquire Now</a>
+          <p class="card__body">
+            Investors are entitled to 20% of the total financial investment on an annual basis,
+            cascaded after a minimum period of three months.
+          </p>
         </div>
 
-        <!-- Shareholder Pathway -->
-        <div class="tier-card tier-card--featured">
-          <span class="tier-badge">Shareholder Pathway</span>
-          <div class="eyebrow" style="margin-bottom: var(--space-3); margin-top: var(--space-2);">Shareholder Track</div>
-          <div class="tier-amount">Le 500,000</div>
-          <div class="tier-usd">≈ USD 25,000 minimum</div>
-          <div class="tier-feature">All Standard Investor benefits</div>
-          <div class="tier-feature">2-year minimum investment period</div>
-          <div class="tier-feature">Eligible for shareholder status</div>
-          <div class="tier-feature">Share allocation % disclosed before agreement</div>
-          <div class="tier-feature">Formalised via legal shareholder agreement</div>
-          <br>
-          <a href="contact.html" class="btn btn--primary" style="width:100%; justify-content:center;">Enquire Now</a>
+        <div class="card reveal reveal-delay-2">
+          <div class="card__icon">🔒</div>
+          <h3 class="card__title">Capital Guaranteed</h3>
+          <p class="card__body">
+            The actual amount invested is refunded in full on or at the stipulated date and time,
+            as formalised in an official signed agreement.
+          </p>
         </div>
 
-      </div>
-
-      <!-- Important notice -->
-      <div class="info-box reveal" style="margin-top: var(--space-8);">
-        <div class="info-box__label">Important Notice</div>
-        <div class="info-box__value" style="font-size: var(--text-base); font-weight: 500; line-height: var(--leading-relaxed);">
-          Shares allocation percentage shall be disclosed and communicated
-          prior to the legalisation of any formal agreement. All investments
-          are subject to formal documentation with the company.
+        <div class="card reveal reveal-delay-3">
+          <div class="card__icon">📄</div>
+          <h3 class="card__title">Official Agreement</h3>
+          <p class="card__body">
+            An official agreement is signed and enforced for each and every investment — providing
+            full legal protection and transparency for all parties.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- =====================================================
+       INVESTMENT DETAILS TABLE
+  ====================================================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Investment Structure</span>
+        <h2 class="section-title section-title--underlined mt-md">Terms &amp; Thresholds</h2>
+      </div>
 
-  <!-- ===========================================================
-       NEXT STEPS CTA
-  =========================================================== -->
-  <section class="section" aria-labelledby="next-heading">
-    <div class="container container--narrow">
-      <div class="callout reveal">
-        <p class="callout__text" id="next-heading">
-          Ready to start your investment journey?
+      <!-- Investment box with table -->
+      <div class="investor-box reveal">
+        <div class="investor-box__title">
+          <span class="section-label">Financial Terms</span>
+          <h3 class="mt-md" style="margin-bottom:0.5rem;">Investment Tiers</h3>
+          <p style="color:var(--color-mid-gray); font-size:0.9rem; max-width:55ch; margin:0 auto;">
+            All investment amounts are governed by a signed official agreement.
+            Returns are disbursed after a minimum period of three months.
+          </p>
+        </div>
+
+        <!-- Investment table -->
+        <table class="investor-table" aria-label="Investment tiers and terms">
+          <thead>
+            <tr>
+              <th>Investment Tier</th>
+              <th>Minimum Amount (NLE)</th>
+              <th>Minimum Amount (USD)</th>
+              <th>Annual Return</th>
+              <th>Shareholder Eligibility</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Standard Investor</strong></td>
+              <td>Le 200,000</td>
+              <td>USD 10,000</td>
+              <td><span class="badge badge--green">20% p.a.</span></td>
+              <td>Not yet — see below</td>
+            </tr>
+            <tr>
+              <td><strong>Shareholder Eligible</strong></td>
+              <td>Le 500,000</td>
+              <td>USD 25,000</td>
+              <td><span class="badge badge--green">20% p.a.</span></td>
+              <td>After 2 years of investment</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Important note -->
+        <div class="investor-note">
+          <strong>📋 Shareholder Note:</strong> The duration required to qualify as a shareholder
+          is a minimum investment period of <strong>two years</strong>, with a minimum amount of
+          Le 500,000 (USD 25,000). Shares allocation percentage will be disclosed and communicated
+          prior to the legalisation of any formal agreement.
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       HOW TO INVEST — STEPS
+  ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Getting Started</span>
+        <h2 class="section-title section-title--underlined mt-md">How to Invest</h2>
+        <p class="section-subtitle">
+          Becoming an investor with Kick Poverty Microfinance is a straightforward process
+          built on transparency and mutual agreement.
         </p>
-        <p class="callout__sub">
-          Contact Dr. Moses Simon directly to express your interest.
-          All enquiries are handled confidentially and professionally.
-        </p>
-        <br>
-        <div style="position:relative;z-index:1;display:flex;justify-content:center;gap:var(--space-3);flex-wrap:wrap;">
-          <a href="contact.html" class="btn btn--primary">Contact Us</a>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="card reveal" style="text-align:center;">
+          <div style="width:52px; height:52px; background:var(--color-navy); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto var(--space-lg); font-family:var(--font-heading); font-size:1.2rem; font-weight:700; color:white;">1</div>
+          <h4 style="margin-bottom:0.5rem;">Express Interest</h4>
+          <p class="card__body">Contact Dr. Moses Simon or Ms. Mariama Farmah to express your interest in investing.</p>
+        </div>
+        <div class="card reveal reveal-delay-1" style="text-align:center;">
+          <div style="width:52px; height:52px; background:var(--color-navy); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto var(--space-lg); font-family:var(--font-heading); font-size:1.2rem; font-weight:700; color:white;">2</div>
+          <h4 style="margin-bottom:0.5rem;">Discuss Terms</h4>
+          <p class="card__body">Our team will walk you through the investment tiers, return structure, and shareholder pathway.</p>
+        </div>
+        <div class="card reveal reveal-delay-2" style="text-align:center;">
+          <div style="width:52px; height:52px; background:var(--color-navy); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto var(--space-lg); font-family:var(--font-heading); font-size:1.2rem; font-weight:700; color:white;">3</div>
+          <h4 style="margin-bottom:0.5rem;">Sign Agreement</h4>
+          <p class="card__body">An official investment agreement is drafted, reviewed, and signed by both parties for legal protection.</p>
+        </div>
+        <div class="card reveal reveal-delay-3" style="text-align:center;">
+          <div style="width:52px; height:52px; background:var(--color-navy); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto var(--space-lg); font-family:var(--font-heading); font-size:1.2rem; font-weight:700; color:white;">4</div>
+          <h4 style="margin-bottom:0.5rem;">Earn Returns</h4>
+          <p class="card__body">Your 20% annual return is disbursed after a minimum of three months, as stipulated in the agreement.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- =====================================================
+       CONTACT FOR INVESTMENT
+  ====================================================== -->
+  <section class="section section--dark">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
 
-  <div id="footer-placeholder"></div>
+        <div class="reveal">
+          <span class="section-label">Reach Out Now</span>
+          <h2 class="section-title mt-md">Interested in Investing?</h2>
+          <p>
+            For more information on our operations and to express your interest in investing,
+            please contact our Chief Executive Director or Director of Credits &amp; Administration
+            directly.
+          </p>
+          <p>
+            We look forward to welcoming impact-driven investors who share our vision of
+            a more financially inclusive Sierra Leone.
+          </p>
+        </div>
 
-  <script src="../js/components.js"></script>
-  <script>
-    injectNav('../');
-    injectFooter('../');
-  </script>
+        <div class="reveal reveal-delay-2">
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+
+            <!-- CEO contact card -->
+            <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-lg); padding:1.5rem; display:flex; align-items:flex-start; gap:1rem;">
+              <div style="width:48px; height:48px; background:var(--color-blue); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">👤</div>
+              <div>
+                <p style="font-weight:700; color:white; margin:0 0 0.2rem;">Dr. Moses Simon</p>
+                <p style="font-size:0.8rem; color:rgba(255,255,255,0.55); margin:0 0 0.75rem;">Chief Executive Director</p>
+                <a href="tel:+23230651955" style="display:block; font-size:0.875rem; color:rgba(255,255,255,0.8); margin-bottom:0.25rem;">📞 +232 30 651 955</a>
+                <a href="https://wa.me/23279179161" target="_blank" rel="noopener" style="display:block; font-size:0.875rem; color:rgba(255,255,255,0.8);">📱 +232 79 179 161 (WhatsApp)</a>
+              </div>
+            </div>
+
+            <!-- Director of Credits contact card -->
+            <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-lg); padding:1.5rem; display:flex; align-items:flex-start; gap:1rem;">
+              <div style="width:48px; height:48px; background:var(--color-blue); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">👤</div>
+              <div>
+                <p style="font-weight:700; color:white; margin:0 0 0.2rem;">Ms. Mariama Farmah</p>
+                <p style="font-size:0.8rem; color:rgba(255,255,255,0.55); margin:0 0 0.75rem;">Director of Credits &amp; Administration</p>
+                <a href="https://wa.me/23280462376" target="_blank" rel="noopener" style="display:block; font-size:0.875rem; color:rgba(255,255,255,0.8);">📱 +232 80 462 376 (WhatsApp)</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="../index.html" class="navbar__logo" style="margin-bottom:1rem;">
+            <div class="navbar__logo-icon">🌍</div>
+            <div class="navbar__logo-text">
+              <span class="navbar__logo-main">CHEND</span>
+              <span class="navbar__logo-sub">Kick Poverty Microfinance</span>
+            </div>
+          </a>
+          <p class="footer__brand-desc">Transforming lives through training, consultancy, and accessible microfinance in Sierra Leone.</p>
+          <div class="footer__contact-item"><span>📍</span><span>Four Mile, Masiaka Highway, Newton, Waterloo, Western Area Rural District</span></div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="../index.html"        class="footer__link">Home</a></li>
+            <li><a href="about.html"        class="footer__link">About CHEND</a></li>
+            <li><a href="microfinance.html" class="footer__link">Microfinance</a></li>
+            <li><a href="investors.html"    class="footer__link">Investors</a></li>
+            <li><a href="contact.html"      class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Investment</h4>
+          <ul class="footer__links">
+            <li><a href="investors.html"           class="footer__link">Why Invest</a></li>
+            <li><a href="investors.html#terms"      class="footer__link">Investment Terms</a></li>
+            <li><a href="investors.html#how-invest" class="footer__link">How to Invest</a></li>
+            <li><a href="contact.html"              class="footer__link">Express Interest</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Contact</h4>
+          <div class="footer__contact-item"><span>📞</span><span>+232 30 651 955</span></div>
+          <div class="footer__contact-item"><span>📞</span><span>+232 79 179 161</span></div>
+          <div class="footer__contact-item"><span>📱</span><span>+232 80 462 376 (WhatsApp)</span></div>
+          <div class="footer__contact-item" style="margin-top:1rem;"><span>👤</span><span>Dr. Moses Simon — CEO</span></div>
+          <div class="footer__contact-item"><span>👤</span><span>Ms. Mariama Farmah — Dir. Credits</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span id="currentYear"></span> CHEND &amp; Kick Poverty Microfinance. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Use</a>
+          <a href="contact.html" class="footer__bottom-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/23279179161" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
   <script src="../js/main.js"></script>
+  <script>if (window.innerWidth >= 768) document.getElementById('navCTA').style.display = 'inline-flex';</script>
 </body>
 </html>

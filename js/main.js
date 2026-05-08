@@ -1,198 +1,264 @@
 /**
- * KICK POVERTY (KICK PO) — MAIN JAVASCRIPT
- * =========================================
- * Handles:
- *   1. Mobile navigation toggle
- *   2. Sticky nav shadow on scroll
- *   3. Active nav link highlighting
- *   4. Back-to-top button show/hide + click
- *   5. Scroll-triggered reveal animations (Intersection Observer)
- *   6. Current year in footer copyright
- *
- * No external dependencies — vanilla JS only.
- * All DOM queries use null checks to be safe across pages.
+ * ============================================================
+ * CHEND & KICK POVERTY MICROFINANCE — MAIN JAVASCRIPT
+ * Shared functionality: navbar, scroll reveal, animations
+ * ============================================================
  */
 
-(function () {
-  'use strict';
+/* ─── DOM READY ─── */
+document.addEventListener('DOMContentLoaded', () => {
+  initNavbar();
+  initScrollReveal();
+  initStickyNav();
+  setActiveNavLink();
+  initCounterAnimation();
+});
 
-  /* --------------------------------------------------------
-     UTILITY: Wait for DOM to be ready
-  -------------------------------------------------------- */
-  document.addEventListener('DOMContentLoaded', init);
+/* ─────────────────────────────────────────────
+   NAVBAR — mobile hamburger toggle
+   ───────────────────────────────────────────── */
+function initNavbar() {
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-  function init () {
-    initNav();
-    initBackToTop();
-    initScrollReveal();
-    initFooterYear();
-    initActiveNavLink();
-  }
+  if (!hamburger || !mobileMenu) return;
 
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', isOpen);
 
-  /* --------------------------------------------------------
-     1. MOBILE NAVIGATION
-     Toggles the mobile menu open/closed.
-     Adds 'open' class to both toggle button and menu panel.
-     Closes menu when a link is clicked (smooth UX on mobile).
-  -------------------------------------------------------- */
-  function initNav () {
-    const toggle = document.querySelector('.nav__toggle');
-    const menu   = document.querySelector('.nav__menu');
-    const links  = document.querySelectorAll('.nav__link');
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = isOpen ? 'hidden' : '';
 
-    if (!toggle || !menu) return;
+    // Accessibility: update aria attributes
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+  });
 
-    // Toggle button click
-    toggle.addEventListener('click', function () {
-      const isOpen = menu.classList.contains('open');
-      menu.classList.toggle('open');
-      toggle.classList.toggle('open');
-      // Update ARIA attribute for accessibility
-      toggle.setAttribute('aria-expanded', !isOpen);
+  // Close mobile menu when a link is clicked
+  mobileMenu.querySelectorAll('.navbar__mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
     });
+  });
 
-    // Close menu when any link is clicked (mobile UX)
-    links.forEach(function (link) {
-      link.addEventListener('click', function () {
-        menu.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close menu when clicking outside on mobile
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.nav') && menu.classList.contains('open')) {
-        menu.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-
-  /* --------------------------------------------------------
-     2. STICKY NAV SHADOW
-     Adds .scrolled class to nav once the user has scrolled
-     past 10px, triggering a subtle drop shadow in CSS.
-  -------------------------------------------------------- */
-  (function initNavScroll () {
-    const nav = document.querySelector('.nav');
-    if (!nav) return;
-
-    function onScroll () {
-      if (window.scrollY > 10) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+  // Close mobile menu on outside click
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
     }
+  });
+}
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // Run on load in case page is already scrolled
-  })();
+/* ─────────────────────────────────────────────
+   STICKY NAV — add "scrolled" class on scroll
+   ───────────────────────────────────────────── */
+function initStickyNav() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
 
+  const onScroll = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  };
 
-  /* --------------------------------------------------------
-     3. ACTIVE NAV LINK
-     Marks the current page's nav link as active by comparing
-     the link href to the current URL pathname.
-  -------------------------------------------------------- */
-  function initActiveNavLink () {
-    const links = document.querySelectorAll('.nav__link');
-    const current = window.location.pathname.split('/').pop() || 'index.html';
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // Run once on load
+}
 
-    links.forEach(function (link) {
-      const href = link.getAttribute('href');
-      // Match exact page or index (root path → index.html)
-      if (href === current || (current === '' && href === 'index.html')) {
-        link.classList.add('active');
-      }
-    });
-  }
+/* ─────────────────────────────────────────────
+   ACTIVE NAV LINK — highlight current page
+   ───────────────────────────────────────────── */
+function setActiveNavLink() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-
-  /* --------------------------------------------------------
-     4. BACK-TO-TOP BUTTON
-     Shows the button after the user scrolls 300px down.
-     Clicking it smoothly scrolls back to the top.
-  -------------------------------------------------------- */
-  function initBackToTop () {
-    const btn = document.querySelector('.back-to-top');
-    if (!btn) return;
-
-    const SCROLL_THRESHOLD = 300; // px before button appears
-
-    // Show / hide based on scroll position
-    function onScroll () {
-      if (window.scrollY > SCROLL_THRESHOLD) {
-        btn.classList.add('visible');
-      } else {
-        btn.classList.remove('visible');
-      }
+  document.querySelectorAll('.navbar__link, .navbar__mobile-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
     }
+  });
+}
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // Evaluate immediately on load
+/* ─────────────────────────────────────────────
+   SCROLL REVEAL — animate elements into view
+   Uses IntersectionObserver for performance
+   ───────────────────────────────────────────── */
+function initScrollReveal() {
+  // All elements with the .reveal class will animate in
+  const revealElements = document.querySelectorAll('.reveal');
 
-    // Click → scroll to top
-    btn.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
+  if (!revealElements.length) return;
 
-
-  /* --------------------------------------------------------
-     5. SCROLL-TRIGGERED REVEAL ANIMATIONS
-     Uses IntersectionObserver to add 'visible' class to
-     elements with class 'reveal' or 'reveal-stagger' as
-     they enter the viewport. CSS handles the animation.
-  -------------------------------------------------------- */
-  function initScrollReveal () {
-    // Exit gracefully if browser doesn't support IntersectionObserver
-    if (!('IntersectionObserver' in window)) {
-      // Fallback: make everything visible immediately
-      document.querySelectorAll('.reveal, .reveal-stagger').forEach(function (el) {
-        el.classList.add('visible');
-      });
-      return;
-    }
-
-    const options = {
-      root: null,            // Observe relative to viewport
-      rootMargin: '0px',
-      threshold: 0.12        // Trigger when 12% of element is visible
-    };
-
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
+  // IntersectionObserver fires when element enters viewport
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Once revealed, stop observing to save resources
+          // Stop observing once revealed (one-time animation)
           observer.unobserve(entry.target);
         }
       });
-    }, options);
+    },
+    {
+      threshold: 0.12,      // Trigger when 12% of element is visible
+      rootMargin: '0px 0px -40px 0px'  // Small offset from bottom
+    }
+  );
 
-    // Observe all elements with reveal classes
-    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function (el) {
-      observer.observe(el);
+  revealElements.forEach(el => observer.observe(el));
+}
+
+/* ─────────────────────────────────────────────
+   COUNTER ANIMATION — animates stat numbers
+   Looks for elements with data-count attribute
+   ───────────────────────────────────────────── */
+function initCounterAnimation() {
+  const counters = document.querySelectorAll('[data-count]');
+
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach(el => observer.observe(el));
+}
+
+/**
+ * Animate a number counter from 0 to target value.
+ * @param {HTMLElement} el - Element with data-count="<number>" attribute
+ */
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-count'), 10);
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 1800; // ms
+  const start = performance.now();
+
+  const update = (timestamp) => {
+    const elapsed = timestamp - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease-out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * target);
+    el.textContent = current.toLocaleString() + suffix;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      el.textContent = target.toLocaleString() + suffix;
+    }
+  };
+
+  requestAnimationFrame(update);
+}
+
+/* ─────────────────────────────────────────────
+   CONTACT FORM — basic validation & feedback
+   ───────────────────────────────────────────── */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Collect form values
+    const name    = form.querySelector('[name="name"]')?.value.trim();
+    const email   = form.querySelector('[name="email"]')?.value.trim();
+    const message = form.querySelector('[name="message"]')?.value.trim();
+
+    // Simple required-field validation
+    if (!name || !email || !message) {
+      showFormMessage(form, 'Please fill in all required fields.', 'error');
+      return;
+    }
+
+    // Email format check
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showFormMessage(form, 'Please enter a valid email address.', 'error');
+      return;
+    }
+
+    // Success state (in a real deployment this would POST to a server)
+    showFormMessage(form, '✓ Thank you! Your message has been received. We will be in touch shortly.', 'success');
+    form.reset();
+  });
+}
+
+/**
+ * Display a success or error message below the form.
+ * @param {HTMLFormElement} form
+ * @param {string} message
+ * @param {'success'|'error'} type
+ */
+function showFormMessage(form, message, type) {
+  // Remove any existing message
+  const existing = form.querySelector('.form-message');
+  if (existing) existing.remove();
+
+  const div = document.createElement('div');
+  div.className = 'form-message';
+  div.textContent = message;
+  div.style.cssText = `
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    ${type === 'success'
+      ? 'background: #dcfce7; color: #15803d; border: 1px solid #86efac;'
+      : 'background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5;'
+    }
+  `;
+
+  form.appendChild(div);
+
+  // Auto-remove after 6 seconds
+  setTimeout(() => div.remove(), 6000);
+}
+
+/* Call contact form init if on the contact page */
+document.addEventListener('DOMContentLoaded', initContactForm);
+
+/* ─────────────────────────────────────────────
+   SMOOTH SCROLL — for anchor links on same page
+   ───────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const targetId = anchor.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      e.preventDefault();
+      const navHeight = parseInt(getComputedStyle(document.documentElement)
+        .getPropertyValue('--nav-height'), 10) || 72;
+
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - navHeight - 16,
+        behavior: 'smooth'
+      });
     });
-  }
+  });
+});
 
-
-  /* --------------------------------------------------------
-     6. FOOTER YEAR
-     Dynamically inserts the current year into any element
-     with the class 'js-year', so copyright is always current.
-  -------------------------------------------------------- */
-  function initFooterYear () {
-    const yearEls = document.querySelectorAll('.js-year');
-    const year = new Date().getFullYear();
-    yearEls.forEach(function (el) {
-      el.textContent = year;
-    });
-  }
-
-})();
+/* ─────────────────────────────────────────────
+   YEAR — auto-update copyright year in footer
+   ───────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  const yearEl = document.getElementById('currentYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+});

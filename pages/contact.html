@@ -1,244 +1,345 @@
 <!DOCTYPE html>
-<!--
-  ================================================================
-  KICK POVERTY — CONTACT PAGE
-  ================================================================
-  File:        pages/contact.html
-  Description: Contact details, WhatsApp links, and address.
-  ================================================================
--->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Kick Poverty Microfinance — reach our CEO or Director of Credits via phone or WhatsApp.">
-  <title>Contact | Kick Poverty Microfinance</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    /* -------------------------------------------------------
-       PAGE-SPECIFIC: Contact card with strong presence
-    ------------------------------------------------------- */
-    .contact-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      padding: var(--space-8) var(--space-6);
-      box-shadow: var(--shadow-md);
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact CHEND and Kick Poverty Microfinance — reach our CEO Dr. Moses Simon or Director Ms. Mariama Farmah for loans, investments, and enquiries." />
+  <title>Contact Us | CHEND & Kick Poverty Microfinance</title>
 
-    .contact-card__name {
-      font-size: var(--text-xl);
-      margin-bottom: var(--space-1);
-    }
-
-    .contact-card__title {
-      font-size: var(--text-sm);
-      color: var(--color-accent);
-      font-weight: 600;
-      margin-bottom: var(--space-5);
-    }
-
-    .phone-link {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      font-weight: 600;
-      color: var(--color-primary);
-      font-size: var(--text-md);
-      transition: color var(--transition-fast);
-    }
-
-    .phone-link:hover {
-      color: var(--color-accent);
-    }
-
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      background: #25D366;
-      color: white;
-      padding: var(--space-2) var(--space-4);
-      border-radius: var(--radius-full);
-      font-size: var(--text-sm);
-      font-weight: 600;
-      margin-top: var(--space-3);
-      transition: background var(--transition-fast), transform var(--transition-fast);
-    }
-
-    .whatsapp-btn:hover {
-      background: #1ebe5b;
-      transform: translateY(-1px);
-    }
-
-    /* Map placeholder */
-    .map-placeholder {
-      background: linear-gradient(135deg, #E8F5EE 0%, #D1EAD8 100%);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: var(--space-8);
-      gap: var(--space-3);
-    }
-
-    .map-placeholder__icon {
-      font-size: 2.5rem;
-    }
-
-    .map-placeholder__title {
-      font-size: var(--text-md);
-      font-weight: 600;
-      color: var(--color-text-primary);
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body id="top">
+<body>
 
-  <div id="nav-placeholder"></div>
+  <!-- =====================================================
+       NAVIGATION BAR
+  ====================================================== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container container--wide">
+      <div class="navbar__inner">
+        <a href="../index.html" class="navbar__logo" aria-label="CHEND Home">
+          <div class="navbar__logo-icon">🌍</div>
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-main">CHEND</span>
+            <span class="navbar__logo-sub">Kick Poverty Microfinance</span>
+          </div>
+        </a>
+        <ul class="navbar__links" role="list">
+          <li><a href="../index.html"        class="navbar__link">Home</a></li>
+          <li><a href="about.html"        class="navbar__link">About</a></li>
+          <li><a href="microfinance.html" class="navbar__link">Microfinance</a></li>
+          <li><a href="investors.html"    class="navbar__link">Investors</a></li>
+          <li><a href="contact.html"      class="navbar__link active">Contact</a></li>
+        </ul>
+        <div class="flex" style="align-items:center; gap:1rem;">
+          <a href="contact.html" class="btn btn--primary navbar__cta" id="navCTA" style="display:none;">Get in Touch</a>
+          <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="navbar__mobile-menu" id="mobileMenu" aria-hidden="true" role="menu">
+      <a href="../index.html"        class="navbar__mobile-link">Home</a>
+      <a href="about.html"        class="navbar__mobile-link">About Us</a>
+      <a href="microfinance.html" class="navbar__mobile-link">Microfinance</a>
+      <a href="investors.html"    class="navbar__mobile-link">Investors</a>
+      <a href="contact.html"      class="navbar__mobile-link">Contact</a>
+      <a href="contact.html" class="btn btn--primary w-full mt-md" style="justify-content:center;">Get in Touch</a>
+    </div>
+  </nav>
 
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
+  <!-- =====================================================
+       PAGE HERO
+  ====================================================== -->
+  <section class="page-hero" aria-labelledby="pageTitle">
     <div class="container">
-      <span class="eyebrow page-hero__eyebrow">Reach Out</span>
-      <h1>Contact Us</h1>
-      <p class="page-hero__lead lead">
-        Whether you're interested in a loan or an investment opportunity,
-        our team is ready to help you take the next step.
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb__sep">›</span>
+        <span>Contact</span>
+      </nav>
+      <p class="page-hero__label">Get in Touch</p>
+      <h1 class="page-hero__title" id="pageTitle">We'd Love to<br />Hear from You</h1>
+      <p class="page-hero__subtitle">
+        Whether you're interested in a loan, an investment, or learning more about our
+        programs — our team is ready to help.
       </p>
     </div>
   </section>
 
+  <!-- =====================================================
+       CONTACT MAIN SECTION
+       Info on the left, enquiry form on the right
+  ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
 
-  <!-- ===========================================================
-       CONTACT DETAILS
-  =========================================================== -->
-  <section class="section" aria-labelledby="contacts-heading">
-    <div class="container container--narrow">
+        <!-- Left: Contact Information -->
+        <div class="reveal">
+          <span class="section-label">Our Details</span>
+          <h2 class="section-title mt-md" style="margin-bottom:var(--space-xl);">Contact Information</h2>
 
-      <div class="section-header reveal">
-        <span class="eyebrow">Get in Touch</span>
-        <h2 id="contacts-heading">Speak to Our Team</h2>
-        <p class="lead">
-          For loan enquiries or investment expressions of interest,
-          please contact us directly via phone or WhatsApp.
-        </p>
-      </div>
-
-      <!-- Contact persons -->
-      <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-5);" class="reveal-stagger">
-
-        <!-- CEO -->
-        <div class="contact-card">
-          <h3 class="contact-card__name">Dr. Moses Simon</h3>
-          <p class="contact-card__title">Chief Executive Director — Founder &amp; Owner</p>
-
-          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-            <div class="contact-item">
-              <div class="contact-item__icon" aria-hidden="true">📞</div>
-              <div>
-                <div class="contact-item__label">Phone</div>
-                <a href="tel:+23230651955" class="phone-link contact-item__value">+232 30 651 955</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item__icon" aria-hidden="true">💬</div>
-              <div>
-                <div class="contact-item__label">WhatsApp</div>
-                <a href="tel:+23279179161" class="phone-link contact-item__value">+232 79 179 161</a>
-                <br>
-                <a href="https://wa.me/23279179161" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-                  <span>💬</span> Message on WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Director of Credits -->
-        <div class="contact-card">
-          <h3 class="contact-card__name">Ms. Mariama Farmah</h3>
-          <p class="contact-card__title">Director of Credits &amp; Administration</p>
-
-          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-            <div class="contact-item">
-              <div class="contact-item__icon" aria-hidden="true">💬</div>
-              <div>
-                <div class="contact-item__label">WhatsApp</div>
-                <a href="tel:+23280462376" class="phone-link contact-item__value">+232 80 462 376</a>
-                <br>
-                <a href="https://wa.me/23280462376" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-                  <span>💬</span> Message on WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===========================================================
-       ADDRESS SECTION — alt background
-  =========================================================== -->
-  <section class="section section--alt" aria-labelledby="address-heading">
-    <div class="container container--narrow">
-      <div class="split reveal">
-
-        <div>
-          <span class="eyebrow">Office Location</span>
-          <h2 id="address-heading" style="margin-top:var(--space-2); margin-bottom: var(--space-5);">Official Address</h2>
-          <div class="contact-item">
-            <div class="contact-item__icon" aria-hidden="true">📍</div>
+          <!-- Location -->
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📍</div>
             <div>
-              <div class="contact-item__label">Address</div>
-              <div class="contact-item__value">
-                Four Mile, Masiaka Highway<br>
-                Newton, Waterloo<br>
-                Western Area Rural District<br>
-                Sierra Leone
-              </div>
+              <p class="contact-info__label">Office Address</p>
+              <p class="contact-info__value">
+                Four Mile, Masiaka Highway<br />
+                Newton, Waterloo<br />
+                Western Area Rural District, Sierra Leone
+              </p>
             </div>
           </div>
 
-          <div class="info-box" style="margin-top: var(--space-6);">
-            <div class="info-box__label">Registration</div>
-            <div class="info-box__value" style="font-size: var(--text-base); font-weight: 500; line-height: var(--leading-relaxed);">
-              Fully registered with the Corporate Affairs Commission &amp;
-              national statutory financial regulatory authorities.
+          <!-- CEO Phone -->
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📞</div>
+            <div>
+              <p class="contact-info__label">Chief Executive Director — Dr. Moses Simon</p>
+              <p class="contact-info__value">
+                <a href="tel:+23230651955">+232 30 651 955</a><br />
+                <a href="https://wa.me/23279179161" target="_blank" rel="noopener">+232 79 179 161 (WhatsApp)</a>
+              </p>
             </div>
+          </div>
+
+          <!-- Director of Credits Phone -->
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📱</div>
+            <div>
+              <p class="contact-info__label">Director of Credits — Ms. Mariama Farmah</p>
+              <p class="contact-info__value">
+                <a href="https://wa.me/23280462376" target="_blank" rel="noopener">+232 80 462 376 (WhatsApp)</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <!-- Reason-to-contact quick links -->
+          <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700; color:var(--color-mid-gray); margin-bottom:1rem;">I want to…</p>
+
+          <div style="display:flex; flex-direction:column; gap:0.75rem;">
+
+            <a href="microfinance.html" style="display:flex; align-items:center; gap:0.75rem; padding:0.875rem 1rem; background:var(--color-off-white); border-radius:var(--radius-md); border:1px solid var(--color-light-gray); text-decoration:none; transition:box-shadow var(--transition-normal), transform var(--transition-normal);"
+               onmouseover="this.style.boxShadow='var(--shadow-md)'; this.style.transform='translateY(-2px)';"
+               onmouseout="this.style.boxShadow=''; this.style.transform='';">
+              <span style="font-size:1.3rem;">💼</span>
+              <div>
+                <p style="font-weight:600; font-size:0.9rem; color:var(--color-text); margin:0 0 0.15rem;">Apply for a Loan</p>
+                <p style="font-size:0.78rem; color:var(--color-mid-gray); margin:0;">Business, education, or property loans</p>
+              </div>
+            </a>
+
+            <a href="investors.html" style="display:flex; align-items:center; gap:0.75rem; padding:0.875rem 1rem; background:var(--color-off-white); border-radius:var(--radius-md); border:1px solid var(--color-light-gray); text-decoration:none; transition:box-shadow var(--transition-normal), transform var(--transition-normal);"
+               onmouseover="this.style.boxShadow='var(--shadow-md)'; this.style.transform='translateY(-2px)';"
+               onmouseout="this.style.boxShadow=''; this.style.transform='';">
+              <span style="font-size:1.3rem;">📈</span>
+              <div>
+                <p style="font-weight:600; font-size:0.9rem; color:var(--color-text); margin:0 0 0.15rem;">Invest in the Company</p>
+                <p style="font-size:0.78rem; color:var(--color-mid-gray); margin:0;">20% annual return, capital guaranteed</p>
+              </div>
+            </a>
+
+            <a href="about.html" style="display:flex; align-items:center; gap:0.75rem; padding:0.875rem 1rem; background:var(--color-off-white); border-radius:var(--radius-md); border:1px solid var(--color-light-gray); text-decoration:none; transition:box-shadow var(--transition-normal), transform var(--transition-normal);"
+               onmouseover="this.style.boxShadow='var(--shadow-md)'; this.style.transform='translateY(-2px)';"
+               onmouseout="this.style.boxShadow=''; this.style.transform='';">
+              <span style="font-size:1.3rem;">🤝</span>
+              <div>
+                <p style="font-weight:600; font-size:0.9rem; color:var(--color-text); margin:0 0 0.15rem;">Learn About CHEND's Programs</p>
+                <p style="font-size:0.78rem; color:var(--color-mid-gray); margin:0;">Training, consultancy, community programs</p>
+              </div>
+            </a>
+
           </div>
         </div>
 
-        <!-- Map placeholder -->
-        <div class="map-placeholder">
-          <div class="map-placeholder__icon" aria-hidden="true">🗺️</div>
-          <div class="map-placeholder__title">Four Mile, Masiaka Highway</div>
-          <p class="caption">Newton, Waterloo · Western Area Rural District · Sierra Leone</p>
+        <!-- Right: Enquiry Form -->
+        <div class="reveal reveal-delay-2">
+          <div class="contact-form">
+            <h3 style="margin-bottom:0.5rem;">Send an Enquiry</h3>
+            <p style="font-size:0.875rem; color:var(--color-mid-gray); margin-bottom:1.75rem;">
+              Fill in your details below and our team will get back to you promptly.
+            </p>
+
+            <!-- Enquiry form — action handled by main.js initContactForm() -->
+            <form id="contactForm" novalidate>
+
+              <!-- Full name -->
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name <span style="color:#dc2626;">*</span></label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="e.g. Fatmata Koroma"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input
+                  class="form-input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+232 __ ___ ___"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span style="color:#dc2626;">*</span></label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <!-- Enquiry type -->
+              <div class="form-group">
+                <label class="form-label" for="enquiryType">Enquiry Type</label>
+                <select class="form-select" id="enquiryType" name="enquiryType">
+                  <option value="" disabled selected>Select an option…</option>
+                  <option value="loan-business">Loan — Women in Business</option>
+                  <option value="loan-education">Loan — Youth Education</option>
+                  <option value="loan-property">Loan — Property</option>
+                  <option value="investment">Investment Opportunity</option>
+                  <option value="training">Training / Consultancy</option>
+                  <option value="general">General Enquiry</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label class="form-label" for="message">Your Message <span style="color:#dc2626;">*</span></label>
+                <textarea
+                  class="form-textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Please describe your enquiry or how we can help…"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Privacy notice -->
+              <p style="font-size:0.78rem; color:var(--color-mid-gray); margin-bottom:1.25rem;">
+                Your information is kept confidential and will only be used to respond to your enquiry.
+              </p>
+
+              <!-- Submit -->
+              <button type="submit" class="btn btn--primary w-full" style="justify-content:center; font-size:1rem; padding:0.85rem;">
+                Send Enquiry →
+              </button>
+
+            </form>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- =====================================================
+       DIRECT WHATSAPP STRIP
+  ====================================================== -->
+  <section style="background:var(--color-off-white); padding:var(--space-2xl) 0; border-top:1px solid var(--color-light-gray); border-bottom:1px solid var(--color-light-gray);">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
+        <div>
+          <h3 style="margin-bottom:0.4rem;">Prefer to chat directly?</h3>
+          <p style="margin:0; color:var(--color-mid-gray); font-size:0.95rem;">
+            Reach us instantly on WhatsApp — our team is available and ready to assist.
+          </p>
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="https://wa.me/23279179161" target="_blank" rel="noopener" class="btn btn--primary btn--lg" style="background:#25d366; border-color:#25d366;">
+            💬 WhatsApp Dr. Moses Simon
+          </a>
+          <a href="https://wa.me/23280462376" target="_blank" rel="noopener" class="btn btn--outline-dark btn--lg">
+            💬 WhatsApp Ms. Mariama Farmah
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div id="footer-placeholder"></div>
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="../index.html" class="navbar__logo" style="margin-bottom:1rem;">
+            <div class="navbar__logo-icon">🌍</div>
+            <div class="navbar__logo-text">
+              <span class="navbar__logo-main">CHEND</span>
+              <span class="navbar__logo-sub">Kick Poverty Microfinance</span>
+            </div>
+          </a>
+          <p class="footer__brand-desc">Transforming lives through training, consultancy, and accessible microfinance in Sierra Leone.</p>
+          <div class="footer__contact-item"><span>📍</span><span>Four Mile, Masiaka Highway, Newton, Waterloo, Western Area Rural District</span></div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="../index.html"        class="footer__link">Home</a></li>
+            <li><a href="about.html"        class="footer__link">About CHEND</a></li>
+            <li><a href="microfinance.html" class="footer__link">Microfinance</a></li>
+            <li><a href="investors.html"    class="footer__link">Investors</a></li>
+            <li><a href="contact.html"      class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Services</h4>
+          <ul class="footer__links">
+            <li><a href="microfinance.html" class="footer__link">Business Loans</a></li>
+            <li><a href="microfinance.html" class="footer__link">Education Loans</a></li>
+            <li><a href="microfinance.html" class="footer__link">Property Loans</a></li>
+            <li><a href="about.html"        class="footer__link">SME Consultancy</a></li>
+            <li><a href="about.html"        class="footer__link">Training Programs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Contact</h4>
+          <div class="footer__contact-item"><span>📞</span><span>+232 30 651 955</span></div>
+          <div class="footer__contact-item"><span>📞</span><span>+232 79 179 161</span></div>
+          <div class="footer__contact-item"><span>📱</span><span>+232 80 462 376 (WhatsApp)</span></div>
+          <div class="footer__contact-item" style="margin-top:1rem;"><span>👤</span><span>Dr. Moses Simon — CEO</span></div>
+          <div class="footer__contact-item"><span>👤</span><span>Ms. Mariama Farmah — Dir. Credits</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span id="currentYear"></span> CHEND &amp; Kick Poverty Microfinance. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Use</a>
+          <a href="contact.html" class="footer__bottom-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <script src="../js/components.js"></script>
-  <script>
-    injectNav('../');
-    injectFooter('../');
-  </script>
+  <a href="https://wa.me/23279179161" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
   <script src="../js/main.js"></script>
+  <script>if (window.innerWidth >= 768) document.getElementById('navCTA').style.display = 'inline-flex';</script>
 </body>
 </html>

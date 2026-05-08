@@ -1,222 +1,830 @@
-<!DOCTYPE html>
-<!--
-  ================================================================
-  KICK POVERTY (KICK PO) MICROFINANCE — HOMEPAGE
-  ================================================================
-  File:        index.html
-  Location:    / (site root)
-  Description: Main landing page. Includes hero, mission intro,
-               key services overview, stats, and CTA block.
-
-  Structure:
-    1. <head>       — Meta, fonts, stylesheet link
-    2. #nav         — Navigation placeholder (injected by JS)
-    3. #top         — Anchor for back-to-top scroll target
-    4. .hero        — Full-viewport hero section
-    5. #mission     — Mission statement section
-    6. #services    — Services overview cards
-    7. #stats       — Key numbers strip
-    8. #cta         — Call-to-action callout
-    9. #footer      — Footer placeholder (injected by JS)
-
-  Mobile-first: base styles → tablet (640px) → desktop (1024px)
-  ================================================================
--->
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kick Poverty (Kick Po) Microfinance Company — facilitating access to small loans for businesses and individuals in Sierra Leone. Founded January 2024.">
-  <title>Kick Poverty Microfinance | Empowering Communities</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Council for Humanitarian Empowerment & Natural Disasters (CHEND) — Empowering communities through structured training, consultancy, and microfinance solutions in Sierra Leone."
+    />
+    <title>CHEND & Kick Poverty Microfinance | Home</title>
 
-  <!-- Google Fonts: Playfair Display (display) + DM Sans (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display (heading) + Source Sans 3 (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body id="top">
+    <!-- Master stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- =====================================================
+       NAVIGATION BAR
+       Sticky, collapses to hamburger on mobile/tablet
+  ====================================================== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container container--wide">
+        <div class="navbar__inner">
+          <!-- Logo -->
+          <a href="index.html" class="navbar__logo" aria-label="CHEND Home">
+            <div class="navbar__logo-icon">🌍</div>
+            <div class="navbar__logo-text">
+              <span class="navbar__logo-main">CHEND</span>
+              <span class="navbar__logo-sub">Kick Poverty Microfinance</span>
+            </div>
+          </a>
 
-  <!-- Navigation injected by components.js -->
-  <div id="nav-placeholder"></div>
+          <!-- Desktop links -->
+          <ul class="navbar__links" role="list">
+            <li><a href="index.html" class="navbar__link">Home</a></li>
+            <li><a href="pages/about.html" class="navbar__link">About</a></li>
+            <li>
+              <a href="pages/microfinance.html" class="navbar__link">Microfinance</a>
+            </li>
+            <li><a href="pages/investors.html" class="navbar__link">Investors</a></li>
+            <li><a href="pages/contact.html" class="navbar__link">Contact</a></li>
+          </ul>
 
+          <!-- CTA + Hamburger -->
+          <div class="flex" style="align-items: center; gap: 1rem">
+            <a
+              href="pages/contact.html"
+              class="btn btn--primary navbar__cta"
+              style="display: none"
+              id="navCTA"
+              >Get in Touch</a
+            >
+            <button
+              class="navbar__hamburger"
+              id="hamburger"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-  <!-- ===========================================================
+      <!-- Mobile dropdown menu -->
+      <div
+        class="navbar__mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+        role="menu"
+      >
+        <a href="index.html" class="navbar__mobile-link" role="menuitem"
+          >Home</a
+        >
+        <a href="pages/about.html" class="navbar__mobile-link" role="menuitem"
+          >About Us</a
+        >
+        <a href="pages/microfinance.html" class="navbar__mobile-link" role="menuitem"
+          >Microfinance</a
+        >
+        <a href="pages/investors.html" class="navbar__mobile-link" role="menuitem"
+          >Investors</a
+        >
+        <a href="pages/contact.html" class="navbar__mobile-link" role="menuitem"
+          >Contact</a
+        >
+        <a
+          href="pages/contact.html"
+          class="btn btn--primary w-full mt-md"
+          style="justify-content: center"
+          >Get in Touch</a
+        >
+      </div>
+    </nav>
+
+    <!-- =====================================================
        HERO SECTION
-       Full-viewport opening with headline, subtext, and CTAs.
-       Stats strip at bottom shows 3 key numbers.
-  =========================================================== -->
-  <section class="hero" aria-label="Hero">
-    <div class="container">
-      <div class="hero__content">
-
-        <!-- Eyebrow label with accent dot -->
-        <div class="hero__eyebrow">
-          <span class="eyebrow">Microfinance · Sierra Leone</span>
-          <span class="hero__eyebrow-dot" aria-hidden="true"></span>
-          <span class="eyebrow">Est. 2024</span>
-        </div>
-
-        <!-- Main headline -->
-        <h1 class="hero__title">
-          Financial Access<br>
-          for <em>Every</em><br>
-          Entrepreneur
-        </h1>
-
-        <!-- Subtext -->
-        <p class="hero__subtitle">
-          Kick Poverty Microfinance provides fast, fair small loans
-          to business owners and service workers — especially in
-          emergency situations where speed matters most.
-        </p>
-
-        <!-- CTA buttons -->
-        <div class="hero__actions">
-          <a href="pages/services.html" class="btn btn--primary">Our Services</a>
-          <a href="pages/contact.html"  class="btn btn--secondary">Get in Touch</a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Key stats strip at bottom of hero -->
-    <div class="hero__stats">
+       Full-viewport introduction with stats + loan types
+  ====================================================== -->
+    <section class="hero" aria-labelledby="heroTitle">
       <div class="container">
-        <div class="hero__stats-inner">
-          <div class="hero__stat">
-            <div class="hero__stat-number">2024</div>
-            <div class="hero__stat-label">Founded</div>
+        <div class="hero__grid">
+          <!-- Left: Copy -->
+          <div class="hero__content">
+            <div class="hero__badge">
+              <span class="hero__badge-dot"></span>
+              Established 2024 · Sierra Leone
+            </div>
+
+            <h1 class="hero__title" id="heroTitle">
+              Empowering People,<br />
+              <em>Ending Poverty</em>
+            </h1>
+
+            <p class="hero__subtitle">
+              The Council for Humanitarian Empowerment &amp; Natural Disasters
+              (CHEND) and its subsidiary
+              <strong>Kick Poverty Microfinance</strong> deliver training,
+              consultancy, and accessible soft loans to those who need it most
+              across Sierra Leone.
+            </p>
+
+            <div class="hero__actions">
+              <a href="pages/microfinance.html" class="btn btn--primary btn--lg"
+                >Explore Loans</a
+              >
+              <a href="pages/about.html" class="btn btn--outline btn--lg"
+                >Learn About Us</a
+              >
+            </div>
           </div>
-          <div class="hero__stat">
-            <div class="hero__stat-number">30%</div>
-            <div class="hero__stat-label">Interest Rate</div>
+
+          <!-- Right: Info card -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__card">
+              <!-- Quick stats -->
+              <div class="hero__stat-grid">
+                <div class="hero__stat">
+                  <div class="hero__stat-value" data-count="30" data-suffix="%">
+                    30%
+                  </div>
+                  <div class="hero__stat-label">Interest Rate</div>
+                </div>
+                <div class="hero__stat">
+                  <div class="hero__stat-value" data-count="20" data-suffix="%">
+                    20%
+                  </div>
+                  <div class="hero__stat-label">Investor Return</div>
+                </div>
+                <div class="hero__stat">
+                  <div class="hero__stat-value">2024</div>
+                  <div class="hero__stat-label">Founded</div>
+                </div>
+                <div class="hero__stat">
+                  <div class="hero__stat-value">Newton</div>
+                  <div class="hero__stat-label">Western Area</div>
+                </div>
+              </div>
+
+              <div class="hero__card-divider"></div>
+
+              <!-- Loan categories -->
+              <p
+                style="
+                  font-size: 0.72rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em;
+                  color: rgba(255, 255, 255, 0.45);
+                  margin-bottom: 0.75rem;
+                  font-weight: 700;
+                "
+              >
+                Loan Categories
+              </p>
+
+              <div class="hero__loan-item">
+                <div class="hero__loan-icon">👩‍💼</div>
+                <span class="hero__loan-text">Women in Business</span>
+              </div>
+              <div class="hero__loan-item">
+                <div class="hero__loan-icon">🎓</div>
+                <span class="hero__loan-text">Youth College Fees</span>
+              </div>
+              <div class="hero__loan-item">
+                <div class="hero__loan-icon">🏠</div>
+                <span class="hero__loan-text">Property Loans</span>
+              </div>
+            </div>
           </div>
-          <div class="hero__stat">
-            <div class="hero__stat-number">20%</div>
-            <div class="hero__stat-label">Investor Return</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       INTRO STRIP
+       Three pillars displayed in a bold colored band
+  ====================================================== -->
+    <div class="intro-strip" aria-label="Our three pillars">
+      <div class="container">
+        <div class="intro-strip__inner">
+          <div class="intro-strip__item reveal">
+            <span class="intro-strip__icon">🤝</span>
+            <strong class="intro-strip__title"
+              >Training &amp; Consultancy</strong
+            >
+            <p class="intro-strip__desc">
+              Structured programs for SMEs and corporate institutions.
+            </p>
           </div>
-          <div class="hero__stat">
-            <div class="hero__stat-number">Le200K</div>
-            <div class="hero__stat-label">Min. Investment</div>
+
+          <div class="intro-strip__item reveal reveal-delay-2">
+            <span class="intro-strip__icon">💰</span>
+            <strong class="intro-strip__title">Microfinance Loans</strong>
+            <p class="intro-strip__desc">
+              Soft loans for women, youth, and property owners.
+            </p>
+          </div>
+
+          <div class="intro-strip__item reveal reveal-delay-3">
+            <span class="intro-strip__icon">🌱</span>
+            <strong class="intro-strip__title">Community Impact</strong>
+            <p class="intro-strip__desc">
+              Serving orphans, widows, the aged, and those in need.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
+    <!-- =====================================================
+       ABOUT OVERVIEW SECTION
+       Brief overview with link to full About page
+  ====================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+          "
+        >
+          <!-- Text side -->
+          <div class="reveal">
+            <span class="section-label">Who We Are</span>
+            <h2 class="section-title mt-md">
+              A Council Built for Human Dignity
+            </h2>
+            <p>
+              The
+              <strong
+                >Council for Humanitarian Empowerment &amp; Natural Disasters
+                (CHEND)</strong
+              >
+              was established to address human capital and knowledge economy
+              challenges facing vulnerable communities in Sierra Leone.
+            </p>
+            <p>
+              During its core mandate, CHEND discovered the urgent need for
+              financial and knowledge capital among the communities it served.
+              This led to the birth of
+              <strong>Kick Poverty Microfinance</strong> — a subsidiary that
+              provides accessible soft loans to women in business, youth seeking
+              college fees, and property owners.
+            </p>
+            <p>
+              Owned and led by <strong>Dr. Moses Simon (PhD, DBA)</strong>, the
+              company has been fully registered with the Corporate Affairs
+              Commission and national statutory financial regulatory
+              authorities.
+            </p>
+            <a href="pages/about.html" class="btn btn--outline-dark mt-lg"
+              >Read Full Story →</a
+            >
+          </div>
 
-  <!-- ===========================================================
+          <!-- Visual side: key facts -->
+          <div class="reveal reveal-delay-2">
+            <div style="display: flex; flex-direction: column; gap: 1rem">
+              <!-- Fact card 1 -->
+              <div
+                class="card"
+                style="display: flex; align-items: center; gap: 1.25rem"
+              >
+                <div class="card__icon" style="margin: 0; flex-shrink: 0">
+                  📍
+                </div>
+                <div>
+                  <h4 class="card__title" style="margin: 0 0 0.25rem">
+                    Official Address
+                  </h4>
+                  <p class="card__body" style="margin: 0">
+                    Four Mile, Masiaka Highway, Newton, Waterloo — Western Area
+                    Rural District
+                  </p>
+                </div>
+              </div>
+
+              <!-- Fact card 2 -->
+              <div
+                class="card"
+                style="display: flex; align-items: center; gap: 1.25rem"
+              >
+                <div class="card__icon" style="margin: 0; flex-shrink: 0">
+                  🏛️
+                </div>
+                <div>
+                  <h4 class="card__title" style="margin: 0 0 0.25rem">
+                    Fully Registered
+                  </h4>
+                  <p class="card__body" style="margin: 0">
+                    Corporate Affairs Commission &amp; national statutory
+                    financial regulatory authorities
+                  </p>
+                </div>
+              </div>
+
+              <!-- Fact card 3 -->
+              <div
+                class="card"
+                style="display: flex; align-items: center; gap: 1.25rem"
+              >
+                <div class="card__icon" style="margin: 0; flex-shrink: 0">
+                  🚀
+                </div>
+                <div>
+                  <h4 class="card__title" style="margin: 0 0 0.25rem">
+                    Founded January 2024
+                  </h4>
+                  <p class="card__body" style="margin: 0">
+                    Started with an initial capital of USD 1,000 and making
+                    tremendous progress.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       TARGET BENEFICIARIES SECTION
+       Who CHEND serves — displayed as icon cards
+  ====================================================== -->
+    <section class="section section--alt" id="beneficiaries">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Who We Serve</span>
+          <h2 class="section-title section-title--underlined mt-md">
+            Target Beneficiaries
+          </h2>
+          <p class="section-subtitle">
+            CHEND's programs are designed for those facing the greatest barriers
+            — providing support, knowledge, and financial access where it
+            matters most.
+          </p>
+        </div>
+
+        <!-- Beneficiary cards grid -->
+        <div class="grid grid--3" style="grid-template-columns: repeat(3, 1fr)">
+          <div class="target-card reveal">
+            <div class="target-card__icon">🧒</div>
+            <div>
+              <h4 class="target-card__title">Orphans</h4>
+              <p class="target-card__desc">
+                Children without parental support, provided with guidance,
+                educational resources, and community care.
+              </p>
+            </div>
+          </div>
+
+          <div class="target-card reveal reveal-delay-1">
+            <div class="target-card__icon">👩</div>
+            <div>
+              <h4 class="target-card__title">Widows</h4>
+              <p class="target-card__desc">
+                Women who have lost spouses and need financial stability,
+                business training, and emotional support.
+              </p>
+            </div>
+          </div>
+
+          <div class="target-card reveal reveal-delay-2">
+            <div class="target-card__icon">♿</div>
+            <div>
+              <h4 class="target-card__title">People with Disabilities</h4>
+              <p class="target-card__desc">
+                Persons living with disability issues, empowered through
+                inclusive training and accessible loan programs.
+              </p>
+            </div>
+          </div>
+
+          <div class="target-card reveal reveal-delay-1">
+            <div class="target-card__icon">👴</div>
+            <div>
+              <h4 class="target-card__title">The Aged (75+)</h4>
+              <p class="target-card__desc">
+                Senior citizens aged 75 and above who require dignified support
+                and welfare provisions.
+              </p>
+            </div>
+          </div>
+
+          <div class="target-card reveal reveal-delay-2">
+            <div class="target-card__icon">🎒</div>
+            <div>
+              <h4 class="target-card__title">Deprived School Children</h4>
+              <p class="target-card__desc">
+                School-going children from financially deprived backgrounds who
+                deserve the chance to learn and grow.
+              </p>
+            </div>
+          </div>
+
+          <div class="target-card reveal reveal-delay-3">
+            <div class="target-card__icon">👩‍💼</div>
+            <div>
+              <h4 class="target-card__title">Women in Business</h4>
+              <p class="target-card__desc">
+                Female entrepreneurs and micro-business owners who need capital
+                to start, grow, or sustain their ventures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       LOAN TYPES SECTION
+       Three main loan products Kick Poverty offers
+  ====================================================== -->
+    <section class="section" id="loans">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Kick Poverty Microfinance</span>
+          <h2 class="section-title section-title--underlined mt-md">
+            Our Loan Products
+          </h2>
+          <p class="section-subtitle">
+            Accessible, structured soft loans designed for the people who need
+            financial capital the most — with clear terms and a supportive
+            process.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- Loan Card: Women in Business -->
+          <div class="loan-card reveal">
+            <div class="loan-card__icon">👩‍💼</div>
+            <h3 class="loan-card__title">Women in Business</h3>
+            <p class="loan-card__desc">
+              Empowering female entrepreneurs — especially widows and single
+              mothers — with the working capital they need to sustain and grow
+              their businesses.
+            </p>
+            <span class="loan-card__badge">Business Loan</span>
+          </div>
+
+          <!-- Loan Card: Youth College Fees -->
+          <div class="loan-card reveal reveal-delay-2">
+            <div class="loan-card__icon">🎓</div>
+            <h3 class="loan-card__title">Youth College Fees</h3>
+            <p class="loan-card__desc">
+              Supporting the next generation by providing loans for tertiary and
+              college education fees, so financial barriers never stop a young
+              person's future.
+            </p>
+            <span class="loan-card__badge">Education Loan</span>
+          </div>
+
+          <!-- Loan Card: Property Loans -->
+          <div class="loan-card reveal reveal-delay-3">
+            <div class="loan-card__icon">🏠</div>
+            <h3 class="loan-card__title">Property Loans</h3>
+            <p class="loan-card__desc">
+              For property owners who require financial support for development,
+              renovation, or investment — backed by collateral and structured
+              agreements.
+            </p>
+            <span class="loan-card__badge">Property Loan</span>
+          </div>
+        </div>
+
+        <div class="text-center mt-2xl reveal">
+          <a href="pages/microfinance.html" class="btn btn--primary btn--lg"
+            >View All Loan Details →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       STATS BAND
+       Key numbers displayed prominently
+  ====================================================== -->
+    <section class="section section--dark" aria-label="Key figures">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">By the Numbers</span>
+          <h2 class="section-title mt-md">Progress Since January 2024</h2>
+        </div>
+
+        <div class="grid grid--4">
+          <div class="stat-card reveal">
+            <div class="stat-card__number" data-count="30" data-suffix="%">
+              30%
+            </div>
+            <div class="stat-card__label">Annual Interest Rate</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-1">
+            <div class="stat-card__number" data-count="20" data-suffix="%">
+              20%
+            </div>
+            <div class="stat-card__label">Return for Investors</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-2">
+            <div class="stat-card__number">USD 1K</div>
+            <div class="stat-card__label">Starting Capital</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <div class="stat-card__number">3</div>
+            <div class="stat-card__label">Loan Products Available</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
        MISSION SECTION
-       Concise mission statement with supporting context.
-  =========================================================== -->
-  <section class="section" id="mission" aria-labelledby="mission-heading">
-    <div class="container container--narrow">
-      <div class="section-header reveal">
-        <span class="eyebrow">Our Purpose</span>
-        <h2 id="mission-heading">Built to Break the Poverty Cycle</h2>
-        <p class="lead">
-          Kick Poverty was formed to give widowed and orphaned women
-          in business the financial foothold they deserve — quickly,
-          fairly, and without unnecessary barriers.
+       Mission statement with visual layout
+  ====================================================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+          "
+        >
+          <!-- Visual side -->
+          <div class="reveal">
+            <div
+              style="
+                background: var(--color-navy);
+                border-radius: var(--radius-xl);
+                padding: 3rem;
+                color: white;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <!-- Decorative circle -->
+              <div
+                style="
+                  position: absolute;
+                  top: -40px;
+                  right: -40px;
+                  width: 200px;
+                  height: 200px;
+                  background: rgba(26, 86, 168, 0.3);
+                  border-radius: 50%;
+                "
+              ></div>
+              <div
+                style="
+                  position: absolute;
+                  bottom: -30px;
+                  left: -30px;
+                  width: 140px;
+                  height: 140px;
+                  background: rgba(45, 125, 210, 0.2);
+                  border-radius: 50%;
+                "
+              ></div>
+
+              <div style="position: relative; z-index: 1">
+                <p
+                  style="
+                    font-size: 0.72rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.12em;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Our Mission
+                </p>
+                <blockquote
+                  style="
+                    font-family: var(--font-heading);
+                    font-size: 1.35rem;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    color: white;
+                    border: none;
+                    padding: 0;
+                    margin: 0 0 1.5rem;
+                  "
+                >
+                  "To foster financial accessibility to women who are into
+                  business but are widowed or orphaned by natural or other
+                  circumstances."
+                </blockquote>
+                <p
+                  style="
+                    font-size: 0.85rem;
+                    color: rgba(255, 255, 255, 0.55);
+                    margin: 0;
+                  "
+                >
+                  — Kick Poverty Microfinance
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text side -->
+          <div class="reveal reveal-delay-2">
+            <span class="section-label">The Story Behind It</span>
+            <h2 class="section-title mt-md">The Birth of Kick Poverty</h2>
+            <p>
+              While fulfilling its core humanitarian mandate, CHEND encountered
+              a recurring theme: communities lacked not just support — they
+              lacked access to financial and knowledge capital to sustain
+              themselves.
+            </p>
+            <p>
+              Following holistic research, the Council established
+              <strong>Kick Poverty Microfinance</strong> as a subsidiary. The
+              scheme was built to provide soft loans to women in business,
+              youths seeking college fees, and property owners who need
+              structured financial assistance.
+            </p>
+            <p>
+              The concept was initiated by <strong>Mariama Farmah</strong>,
+              supported and sponsored by
+              <strong>Dr. Moses Simon (PhD, DBA)</strong>, who solely owns and
+              leads the company today.
+            </p>
+            <a href="pages/about.html" class="btn btn--outline-dark mt-lg"
+              >Meet the Team →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       CTA BAND
+       Call to action — invest or apply
+  ====================================================== -->
+    <section class="cta-band" aria-label="Call to action">
+      <div class="container">
+        <h2>Ready to Partner With Us?</h2>
+        <p>
+          Whether you're seeking a loan, looking to invest, or want to learn
+          more about our programs — we'd love to hear from you.
         </p>
-      </div>
-
-      <!-- Three pillar cards -->
-      <div class="cards-grid reveal-stagger">
-
-        <div class="card">
-          <div class="card__icon" aria-hidden="true">⚡</div>
-          <h3 class="card__title">Fast Disbursement</h3>
-          <p>Loans released quickly — especially in emergency situations — because financial urgency cannot wait.</p>
-        </div>
-
-        <div class="card">
-          <div class="card__icon" aria-hidden="true">🤝</div>
-          <h3 class="card__title">Inclusive Access</h3>
-          <p>Serving women who are widowed or orphaned by natural or other circumstances, ensuring no one is left behind.</p>
-        </div>
-
-        <div class="card">
-          <div class="card__icon" aria-hidden="true">📋</div>
-          <h3 class="card__title">Responsible Lending</h3>
-          <p>Every applicant is properly screened, with guarantors and collateral in place, protecting both borrowers and the company.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===========================================================
-       STATS SECTION — alternating background
-  =========================================================== -->
-  <section class="section section--alt" aria-labelledby="stats-heading">
-    <div class="container">
-      <div class="section-header section-header--center reveal">
-        <span class="eyebrow">By the Numbers</span>
-        <h2 id="stats-heading">Steady Growth Since Day One</h2>
-      </div>
-
-      <div class="stats-grid reveal-stagger">
-        <div class="stat-card">
-          <div class="stat-card__number">Le20,000</div>
-          <div class="stat-card__label">Initial Capital (New Leones)</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__number">USD 1,000</div>
-          <div class="stat-card__label">Equivalent Starting Capital</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__number">6</div>
-          <div class="stat-card__label">Core Staff Members</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__number">100%</div>
-          <div class="stat-card__label">Registered &amp; Compliant</div>
+        <div class="cta-band__actions">
+          <a href="pages/investors.html" class="btn btn--outline btn--lg"
+            >Investment Opportunities</a
+          >
+          <a
+            href="pages/contact.html"
+            class="btn btn--primary btn--lg"
+            style="background: white; color: var(--color-blue)"
+            >Contact Us Today</a
+          >
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- =====================================================
+       FOOTER
+       Navigation, contact details, copyright
+  ====================================================== -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <!-- Brand column -->
+          <div>
+            <a
+              href="index.html"
+              class="navbar__logo"
+              style="margin-bottom: 1rem"
+            >
+              <div class="navbar__logo-icon">🌍</div>
+              <div class="navbar__logo-text">
+                <span class="navbar__logo-main">CHEND</span>
+                <span class="navbar__logo-sub">Kick Poverty Microfinance</span>
+              </div>
+            </a>
+            <p class="footer__brand-desc">
+              The Council for Humanitarian Empowerment &amp; Natural Disasters —
+              transforming lives through training, consultancy, and accessible
+              microfinance.
+            </p>
+            <div class="footer__contact-item">
+              <span>📍</span>
+              <span
+                >Four Mile, Masiaka Highway, Newton, Waterloo, Western Area
+                Rural District</span
+              >
+            </div>
+          </div>
 
-  <!-- ===========================================================
-       CTA CALLOUT
-  =========================================================== -->
-  <section class="section" aria-labelledby="cta-heading">
-    <div class="container container--narrow">
-      <div class="callout reveal">
-        <p class="callout__text" id="cta-heading">
-          Ready to invest in community-driven<br>financial growth?
-        </p>
-        <p class="callout__sub">
-          Investors earn 20% annual returns on a minimum of Le200,000 (USD&nbsp;10,000).
-          An official agreement is signed for every investment.
-        </p>
-        <br>
-        <div style="position:relative; z-index:1; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-          <a href="pages/investors.html" class="btn btn--primary">Investor Details</a>
-          <a href="pages/contact.html"   class="btn btn--secondary">Contact Us</a>
+          <!-- Quick Links -->
+          <div>
+            <h4 class="footer__col-title">Quick Links</h4>
+            <ul class="footer__links">
+              <li><a href="index.html" class="footer__link">Home</a></li>
+              <li><a href="pages/about.html" class="footer__link">About CHEND</a></li>
+              <li>
+                <a href="pages/microfinance.html" class="footer__link"
+                  >Microfinance</a
+                >
+              </li>
+              <li>
+                <a href="pages/investors.html" class="footer__link">Investors</a>
+              </li>
+              <li><a href="pages/contact.html" class="footer__link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="footer__col-title">Services</h4>
+            <ul class="footer__links">
+              <li>
+                <a href="pages/microfinance.html" class="footer__link"
+                  >Business Loans</a
+                >
+              </li>
+              <li>
+                <a href="pages/microfinance.html" class="footer__link"
+                  >Education Loans</a
+                >
+              </li>
+              <li>
+                <a href="pages/microfinance.html" class="footer__link"
+                  >Property Loans</a
+                >
+              </li>
+              <li>
+                <a href="pages/about.html" class="footer__link">SME Consultancy</a>
+              </li>
+              <li>
+                <a href="pages/about.html" class="footer__link">Training Programs</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="footer__col-title">Contact</h4>
+            <div class="footer__contact-item">
+              <span>📞</span>
+              <span>+232 30 651 955</span>
+            </div>
+            <div class="footer__contact-item">
+              <span>📞</span>
+              <span>+232 79 179 161</span>
+            </div>
+            <div class="footer__contact-item">
+              <span>📱</span>
+              <span>+232 80 462 376 (WhatsApp)</span>
+            </div>
+            <div class="footer__contact-item" style="margin-top: 1rem">
+              <span>👤</span>
+              <span>Dr. Moses Simon — CEO</span>
+            </div>
+            <div class="footer__contact-item">
+              <span>👤</span>
+              <span>Ms. Mariama Farmah — Dir. Credits</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; <span id="currentYear"></span> CHEND &amp; Kick Poverty
+            Microfinance. All rights reserved.
+          </p>
+          <div class="footer__bottom-links">
+            <a href="#" class="footer__bottom-link">Privacy Policy</a>
+            <a href="#" class="footer__bottom-link">Terms of Use</a>
+            <a href="pages/contact.html" class="footer__bottom-link">Contact</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
 
+    <!-- WhatsApp floating button -->
+    <a
+      href="https://wa.me/23279179161"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      title="Chat with us on WhatsApp"
+      >💬</a
+    >
 
-  <!-- Footer injected by components.js -->
-  <div id="footer-placeholder"></div>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
 
-
-  <!-- Scripts -->
-  <script src="js/components.js"></script>
-  <script>
-    // Inject shared nav and footer (base path = '' for root index)
-    injectNav('');
-    injectFooter('');
-  </script>
-  <script src="js/main.js"></script>
-
-</body>
+    <!-- Show CTA in nav on larger screens -->
+    <script>
+      if (window.innerWidth >= 768) {
+        document.getElementById("navCTA").style.display = "inline-flex";
+      }
+    </script>
+  </body>
 </html>
